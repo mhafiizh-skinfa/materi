@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python (Desktop & Data Analyst) | Materi Pembelajaran Pemrograman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --primary: #667eea;
+      --secondary: #764ba2;
+      --bg: #f5f7ff;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .container { width: min(980px, 92%); margin: 0 auto; }
+    nav {
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 10px;
+    }
+    .back {
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .title-nav { font-weight: 700; }
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 52px 0;
+    }
+    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+    .hero p { margin-top: 10px; max-width: 760px; }
+    .badge {
+      display: inline-block;
+      margin-top: 12px;
+      background: rgba(255, 255, 255, .2);
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    main { padding: 28px 0 40px; }
+    section.content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    section.content h2 {
+      margin: 0 0 8px;
+      font-size: 1.14rem;
+    }
+    pre {
+      margin: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 10px;
+      overflow-x: auto;
+      padding: 14px;
+    }
+    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
+    ol { margin: 0; padding-left: 20px; }
+    .refs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+    }
+    .ref-card {
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fff;
+      transition: transform .22s ease;
+    }
+    .ref-card:hover { transform: translateY(-3px); }
+    .ref-card strong { display: block; margin-bottom: 4px; }
+    .ref-card span { color: var(--muted); font-size: .92rem; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-wrap">
+      <a class="back" href="../index.html">← Kembali</a>
+      <div class="title-nav">Python (Desktop & Data Analyst)</div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>🐍 Python (Desktop & Data Analyst)</h1>
+      <p>Bahasa yang mudah dipelajari dan sangat fleksibel untuk banyak kebutuhan.</p>
+      <span class="badge">Fullstack, Mobile & Desktop</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content">
+      <h2>📖 Penjelasan Mendalam</h2>
+      <p>Python populer karena sintaksnya ringkas dan mudah dibaca. Materi mencakup dasar pemrograman, struktur data, fungsi, serta pengantar analisis data menggunakan pustaka seperti pandas.</p>
+    </section>
+
+    <section class="content">
+      <h2>💡 Analogi &amp; Contoh</h2>
+      <p>Python seperti alat serbaguna: mudah dipakai untuk tugas harian hingga proyek data yang kompleks.</p>
+    </section>
+
+    <section class="content">
+      <h2>💻 Contoh Praktik</h2>
+      <pre><code>nilai = [80, 90, 75]
+rata = sum(nilai) / len(nilai)
+print(f'Rata-rata: {rata}')</code></pre>
+    </section>
+
+    <section class="content">
+      <h2>✏️ Latihan Soal</h2>
+      <ol><li>Buat program input 5 nilai lalu hitung rata-ratanya.</li><li>Buat script menampilkan data siswa dalam format tabel teks.</li><li>Coba baca file CSV sederhana lalu tampilkan 3 baris pertama.</li></ol>
+    </section>
+
+    <section class="content">
+      <h2>📚 Referensi Belajar</h2>
+      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=python+dasar+indonesia" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Python Dasar Indonesia</span></a><a class="ref-card" href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Python for Beginners</span></a><a class="ref-card" href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Python Docs</span></a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
+  </footer>
+</body>
+</html>
