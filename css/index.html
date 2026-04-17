@@ -3,154 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS | Materi Pembelajaran Pemrograman</title>
+  <title>CSS | Materi Pemrograman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    .container { width: min(980px, 92%); margin: 0 auto; }
-    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
-    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
-    .title-nav { font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
-    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .hero p { margin-top: 10px; max-width: 760px; }
-    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
-    main { padding: 28px 0 40px; }
-    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
-    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
-    h3 { margin: 14px 0 8px; }
-    ul, ol { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
-    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid var(--border); padding: 10px; }
-    th { background: var(--primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg); }
-    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
-    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
-    .ref-card:hover { transform: translateY(-3px); }
-    .ref-card strong { display: block; margin-bottom: 4px; }
-    .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
-</style>
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
 </head>
 <body>
+
   <nav>
     <div class="container nav-wrap">
       <a class="back" href="../index.html">← Kembali</a>
-      <div class="title-nav">CSS</div>
+      <strong>CSS</strong>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container">
       <h1>🎨 CSS</h1>
-      <p>Mengatur tampilan web agar menarik, konsisten, dan responsif di berbagai layar.</p>
+      <p>Daftar isi sub-halaman materi CSS yang disusun bertahap dari konsep dasar sampai project nyata.</p>
       <span class="badge">Kelas X</span>
     </div>
   </header>
-
   <main class="container">
     <section class="content">
-      <h2>📖 Section 1: Penjelasan mendalam</h2>
-      <h3>Konsep Inti</h3>
-      <ul><li>Dasar selector, specificity, inheritance, dan cascading.</li><li>Box model (margin, border, padding, content).</li><li>Layout modern memakai Flexbox/Grid.</li><li>Responsif dengan media query dan unit relatif.</li></ul>
-      <h3>Ringkasan Komponen</h3>
-      <table>
-        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
-        <tbody><tr><td>Selector</td><td>Menarget elemen untuk diberi gaya.</td><td>Utamakan class selector.</td></tr><tr><td>Box Model</td><td>Ruang tiap elemen.</td><td>Gunakan box-sizing border-box.</td></tr><tr><td>Responsive</td><td>Adaptasi tampilan lintas layar.</td><td>Uji di mobile terlebih dahulu.</td></tr></tbody>
-      </table>
-      <div data-wajib-s1="css">
-      <h3>Box model wajib</h3><pre><code>+---------------------------+
-| margin                    |
-|  +---------------------+  |
-|  | border              |  |
-|  |  +---------------+  |  |
-|  |  | padding       |  |  |
-|  |  |  +---------+  |  |  |
-|  |  |  | content |  |  |  |
-|  |  |  +---------+  |  |  |
-|  |  +---------------+  |  |
-|  +---------------------+  |
-+---------------------------+</code></pre><p>Selector lanjutan: <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
-      <h3>Analogi Sehari-hari</h3>
-      <ul><li>CSS seperti seragam yang membuat tampilan lebih rapi.</li><li>CSS seperti dekorasi kelas tanpa mengubah struktur ruangan.</li></ul>
-      <h3>Kasus Dunia Kerja</h3>
-      <p>Tim UI menerapkan design system berbasis CSS agar seluruh halaman produk konsisten.</p>
-      <div data-wajib-s2="css">
-      <h3>Kasus UI modern</h3><p>Layout dashboard biasanya menggabungkan <strong>Flexbox</strong> untuk baris/kolom cepat, <strong>Grid</strong> untuk area kompleks, <strong>CSS Variables</strong> untuk tema, dan <strong>media query</strong> untuk responsif.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🛠️ Section 3: Contoh step-by-step</h2>
-      <h3>Langkah 1: Gaya global</h3><p>Set font dan warna dasar.</p><pre><code>/* Mengatur gaya dasar */
-body { font-family: Poppins, sans-serif; color: #1f2937; }</code></pre><h3>Langkah 2: Layout flex</h3><p>Menyusun beberapa card.</p><pre><code>.cards { display: flex; gap: 12px; flex-wrap: wrap; }
-.card { flex: 1 1 220px; }</code></pre><h3>Langkah 3: Media query</h3><p>Sesuaikan teks untuk layar kecil.</p><pre><code>h1 { font-size: 2rem; }
-@media (max-width: 600px) {
-  /* Menyesuaikan ukuran judul */
-  h1 { font-size: 1.4rem; }
-}</code></pre>
-      <div data-wajib-s3="css">
-      <h3>Contoh kode wajib</h3><pre><code>:root { --primary: #667eea; --gap: 12px; }
-.menu a:hover { color: var(--primary); }
-input:focus { outline: 2px solid var(--primary); }
-.list li:nth-child(2n) { background: var(--bg); }
-
-.wrap { display: flex; gap: var(--gap); }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }</code></pre>
-      </div>
-    </section>
-
-    
-
-    <section class="content">
-      <h2>🧠 Section 4: Latihan Soal</h2>
-      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa inline style tidak cocok untuk proyek besar?</p></div>
-      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana box model memengaruhi lebar elemen?</p></div>
-      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi hover style tombol.</p><pre><code>.btn:hover {
-  background: ???;
-  transform: ???;
-}</code></pre></div>
-      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi media query grid satu kolom.</p><pre><code>@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: ???;
-  }
-}</code></pre></div>
-      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang stylesheet landing page sekolah yang responsif.</p></div>
-      <div data-wajib-s4="css">
-      <p><strong>Checklist latihan:</strong> sertakan pseudo-class, Flexbox/Grid, variabel CSS, dan media query.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>📚 Section 5: Referensi</h2>
-      <div class="refs">
-        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
-        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
-        <a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
-        <a class="ref-card" href="https://dev.to/diwakarkr/learn-css-flexbox-in-10-minutes-57cd" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
-      </div>
+      <h2>📚 Daftar Isi Materi</h2>
+      <p>Pilih urutan belajar dari atas ke bawah agar pemahaman lebih kuat. Jika masih awam, kerjakan latihan dari setiap halaman sebelum lanjut.</p>
+      <div class="table-cards"><a class="toc-card" href="pengenalan.html"><strong>1. Pengenalan CSS</strong><span>Apa itu CSS, inline/internal/external, cascade &amp; specificity.</span></a><a class="toc-card" href="selector.html"><strong>2. Selector CSS</strong><span>Element, class, id, universal, attribute, pseudo, combinator.</span></a><a class="toc-card" href="box-model.html"><strong>3. Box Model</strong><span>Content/padding/border/margin dan box-sizing.</span></a><a class="toc-card" href="warna-font.html"><strong>4. Warna dan Font</strong><span>Format warna, background, Google Fonts, typography.</span></a><a class="toc-card" href="display-position.html"><strong>5. Display dan Position</strong><span>display, position, z-index, float.</span></a><a class="toc-card" href="flexbox.html"><strong>6. Flexbox</strong><span>Container/item properties, navbar dan card layout.</span></a><a class="toc-card" href="grid.html"><strong>7. CSS Grid</strong><span>grid-template, gap, auto-fit/minmax.</span></a><a class="toc-card" href="responsive.html"><strong>8. Responsive Web Design</strong><span>Viewport, media query, breakpoints, mobile-first.</span></a><a class="toc-card" href="variabel-animasi.html"><strong>9. Variabel dan Animasi</strong><span>CSS variables, transition, transform, keyframes.</span></a><a class="toc-card" href="project-1.html"><strong>10. Mini Project 1</strong><span>Styling Halaman Profil.</span></a><a class="toc-card" href="project-2.html"><strong>11. Mini Project 2</strong><span>Kartu Produk Responsive.</span></a><a class="toc-card" href="project-utama.html"><strong>12. Project Utama</strong><span>Landing Page Sekolah Fully Responsive.</span></a></div>
     </section>
   </main>
+  <footer><div class="container">SMK Informatika Al-Irsyad Al-Islamiyyah Cirebon</div></footer>
 
-  <footer>
-    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
-  </footer>
 </body>
 </html>

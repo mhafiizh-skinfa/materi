@@ -3,151 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML | Materi Pembelajaran Pemrograman</title>
+  <title>HTML | Materi Pemrograman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    .container { width: min(980px, 92%); margin: 0 auto; }
-    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
-    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
-    .title-nav { font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
-    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .hero p { margin-top: 10px; max-width: 760px; }
-    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
-    main { padding: 28px 0 40px; }
-    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
-    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
-    h3 { margin: 14px 0 8px; }
-    ul, ol { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
-    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid var(--border); padding: 10px; }
-    th { background: var(--primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg); }
-    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
-    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
-    .ref-card:hover { transform: translateY(-3px); }
-    .ref-card strong { display: block; margin-bottom: 4px; }
-    .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
-</style>
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
 </head>
 <body>
+
   <nav>
     <div class="container nav-wrap">
       <a class="back" href="../index.html">← Kembali</a>
-      <div class="title-nav">HTML</div>
+      <strong>HTML</strong>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container">
       <h1>🧱 HTML</h1>
-      <p>Menyusun struktur konten web yang semantik, rapi, dan mudah diakses.</p>
+      <p>Daftar isi sub-halaman materi HTML yang disusun bertahap dari konsep dasar sampai project nyata.</p>
       <span class="badge">Kelas X</span>
     </div>
   </header>
-
   <main class="container">
     <section class="content">
-      <h2>📖 Section 1: Penjelasan mendalam</h2>
-      <h3>Konsep Inti</h3>
-      <ul><li>Struktur dokumen HTML: doctype, head, body.</li><li>Elemen semantic HTML5: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>.</li><li>Komponen form: label, input, button dan atribut penting.</li><li>Prinsip aksesibilitas seperti alt text dan heading hierarchy.</li></ul>
-      <h3>Ringkasan Komponen</h3>
-      <table>
-        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
-        <tbody><tr><td>Semantik</td><td>Elemen dengan makna struktur.</td><td>Gunakan sesuai fungsi konten.</td></tr><tr><td>Form</td><td>Elemen pengambil input user.</td><td>Pasangkan label dan id.</td></tr><tr><td>Media</td><td>img/video/audio untuk konten kaya.</td><td>Isi alt gambar secara deskriptif.</td></tr></tbody>
-      </table>
-      <div data-wajib-s1="html">
-      <h3>Struktur HTML5 wajib</h3><p>Dokumen selalu dimulai dari deklarasi <code>&lt;!DOCTYPE html&gt;</code> agar browser membaca standar HTML5.</p><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="id"&gt;
-  &lt;head&gt;...&lt;/head&gt;
-  &lt;body&gt;...&lt;/body&gt;
-&lt;/html&gt;</code></pre><p>Gunakan tag semantik: <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
-      <h3>Analogi Sehari-hari</h3>
-      <ul><li>HTML seperti kerangka rumah sebelum dekorasi.</li><li>HTML seperti daftar isi buku supaya pembaca paham susunan topik.</li></ul>
-      <h3>Kasus Dunia Kerja</h3>
-      <p>Frontend developer marketplace menyusun struktur halaman produk agar SEO dan aksesibilitas tetap baik.</p>
-      <div data-wajib-s2="html">
-      <h3>Atribut penting di proyek nyata</h3><p>Contoh atribut yang wajib dipahami: <code>id</code>, <code>class</code>, <code>href</code>, <code>src</code>, <code>alt</code>, <code>placeholder</code>, <code>required</code>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🛠️ Section 3: Contoh step-by-step</h2>
-      <h3>Langkah 1: Struktur dasar</h3><p>Membuat dokumen HTML valid.</p><pre><code><!DOCTYPE html>
-<html lang="id">
-<head><title>Profil</title></head>
-<body><h1>Halo HTML</h1></body>
-</html></code></pre><h3>Langkah 2: Semantik</h3><p>Menata blok konten utama.</p><pre><code><header><h1>Portal Sekolah</h1></header>
-<main><section><h2>Pengumuman</h2>
-      <div data-wajib-s3="html">
-      <h3>Contoh markup lengkap</h3><pre><code>&lt;header id="top" class="hero"&gt;...&lt;/header&gt;
-&lt;nav&gt;&lt;a href="/profil"&gt;Profil&lt;/a&gt;&lt;/nav&gt;
-&lt;main&gt;
-  &lt;section&gt;&lt;article&gt;Konten&lt;/article&gt;&lt;/section&gt;
-  &lt;img src="foto.jpg" alt="Foto siswa" /&gt;
-  &lt;input placeholder="Nama" required /&gt;
-&lt;/main&gt;
-&lt;footer&gt;Hak cipta&lt;/footer&gt;</code></pre>
-      </div></section></main>
-<footer>© 2026</footer></code></pre><h3>Langkah 3: Form</h3><p>Membuat form sederhana.</p><pre><code><form>
-  <!-- Label membantu aksesibilitas -->
-  <label for="nama">Nama</label>
-  <input id="nama" type="text" />
-  <button type="submit">Kirim</button>
-</form></code></pre>
-    </section>
-
-    
-
-    <section class="content">
-      <h2>🧠 Section 4: Latihan Soal</h2>
-      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Kenapa elemen semantik berpengaruh pada SEO?</p></div>
-      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Apa akibat jika gambar tidak punya atribut alt?</p></div>
-      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi struktur halaman dengan nav/main/footer.</p><pre><code><body>
-  <header>???</header>
-  <main>???</main>
-  <footer>???</footer>
-</body></code></pre></div>
-      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi form registrasi dengan input password.</p><pre><code><label for="password">Password</label>
-<input id="password" type="???" />
-<button>???</button></code></pre></div>
-      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat halaman profil UMKM dengan katalog dan form kontak.</p></div>
-      <div data-wajib-s4="html">
-      <p><strong>Checklist latihan:</strong> tiap jawaban harus memakai struktur <code>&lt;!DOCTYPE&gt;</code>, semantik utama, dan atribut wajib sesuai fungsi.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>📚 Section 5: Referensi</h2>
-      <div class="refs">
-        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
-        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
-        <a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
-        <a class="ref-card" href="https://www.petanikode.com/html-dasar/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
-      </div>
+      <h2>📚 Daftar Isi Materi</h2>
+      <p>Pilih urutan belajar dari atas ke bawah agar pemahaman lebih kuat. Jika masih awam, kerjakan latihan dari setiap halaman sebelum lanjut.</p>
+      <div class="table-cards"><a class="toc-card" href="pengenalan.html"><strong>1. Pengenalan HTML</strong><span>Sejarah HTML, cara browser membaca HTML, tools, dan struktur dasar.</span></a><a class="toc-card" href="tag-dasar.html"><strong>2. Tag Dasar HTML</strong><span>h1-h6, p, br, hr, komentar + tabel fungsi dan contoh.</span></a><a class="toc-card" href="teks-format.html"><strong>3. Format Teks HTML</strong><span>strong, em, u, del, sup, sub, pre, blockquote, span, div.</span></a><a class="toc-card" href="link-gambar.html"><strong>4. Link dan Gambar</strong><span>Tag a dan img, termasuk gambar sebagai link.</span></a><a class="toc-card" href="list.html"><strong>5. List HTML</strong><span>ul, ol, nested list, dl dengan contoh nyata.</span></a><a class="toc-card" href="table.html"><strong>6. Table HTML</strong><span>table/thead/tbody/tfoot/tr/th/td, colspan, rowspan.</span></a><a class="toc-card" href="form.html"><strong>7. Form HTML</strong><span>Semua input, select, textarea, button, label, required.</span></a><a class="toc-card" href="semantic.html"><strong>8. Semantic HTML</strong><span>header/nav/main/section/article/aside/footer vs div-only.</span></a><a class="toc-card" href="multimedia.html"><strong>9. Multimedia HTML</strong><span>audio, video, iframe YouTube, figure, figcaption.</span></a><a class="toc-card" href="atribut-global.html"><strong>10. Atribut Global HTML</strong><span>id, class, style, title, lang, data-*, hidden.</span></a><a class="toc-card" href="project-1.html"><strong>11. Mini Project 1</strong><span>Halaman Profil Diri.</span></a><a class="toc-card" href="project-2.html"><strong>12. Mini Project 2</strong><span>Form Pendaftaran Siswa.</span></a><a class="toc-card" href="project-utama.html"><strong>13. Project Utama</strong><span>Website Profil Sekolah lengkap.</span></a></div>
     </section>
   </main>
+  <footer><div class="container">SMK Informatika Al-Irsyad Al-Islamiyyah Cirebon</div></footer>
 
-  <footer>
-    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
-  </footer>
 </body>
 </html>

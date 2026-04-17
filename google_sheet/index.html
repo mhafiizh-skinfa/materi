@@ -3,125 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Sheet | Materi Pembelajaran Pemrograman</title>
+  <title>Google Sheet | Materi Pemrograman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    .container { width: min(980px, 92%); margin: 0 auto; }
-    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
-    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
-    .title-nav { font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
-    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .hero p { margin-top: 10px; max-width: 760px; }
-    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
-    main { padding: 28px 0 40px; }
-    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
-    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
-    h3 { margin: 14px 0 8px; }
-    ul, ol { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
-    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid var(--border); padding: 10px; }
-    th { background: var(--primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg); }
-    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
-    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
-    .ref-card:hover { transform: translateY(-3px); }
-    .ref-card strong { display: block; margin-bottom: 4px; }
-    .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
-</style>
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
 </head>
 <body>
+
   <nav>
     <div class="container nav-wrap">
       <a class="back" href="../index.html">← Kembali</a>
-      <div class="title-nav">Google Sheet</div>
+      <strong>Google Sheet</strong>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container">
-      <h1>📊 Google Sheet</h1>
-      <p>Mengolah data kolaboratif dengan formula dan tabel pivot.</p>
-      <span class="badge">Kelas XI</span>
+      <h1>📗 Google Sheet</h1>
+      <p>Daftar isi sub-halaman materi Google Sheet yang disusun bertahap dari konsep dasar sampai project nyata.</p>
+      <span class="badge">Kelas XI (Data Analyst)</span>
     </div>
   </header>
-
   <main class="container">
     <section class="content">
-      <h2>📖 Section 1: Penjelasan mendalam</h2>
-      <h3>Konsep Inti</h3>
-      <ul><li>Formula inti: SUM, AVERAGE, IF, VLOOKUP/XLOOKUP.</li><li>Filter, sort, data validation untuk kualitas data.</li><li>Pivot table untuk ringkasan cepat.</li><li>Kolaborasi realtime dan version history.</li></ul>
-      <h3>Ringkasan Komponen</h3>
-      <table>
-        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
-        <tbody><tr><td>Formula</td><td>Perhitungan otomatis per sel.</td><td>Gunakan referensi range tepat.</td></tr><tr><td>Validation</td><td>Membatasi input data.</td><td>Kurangi typo user.</td></tr><tr><td>Pivot Table</td><td>Ringkasan multidimensi.</td><td>Gunakan field yang relevan.</td></tr></tbody>
-      </table>
-      <div data-wajib-s1="google_sheet">
-      <h3>Fitur inti Google Sheet</h3><p>Pahami interface, format data, conditional formatting, pivot table, dan chart (charts).</p><p>Rumus wajib: <code>SUM</code>, <code>AVERAGE</code>, <code>MAX</code>, <code>MIN</code>, <code>COUNT</code>, <code>IF</code>, <code>VLOOKUP</code>, <code>HLOOKUP</code>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
-      <h3>Analogi Sehari-hari</h3>
-      <ul><li>Google Sheet seperti buku kas digital bersama.</li><li>Formula seperti kalkulator otomatis yang terus diperbarui.</li></ul>
-      <h3>Kasus Dunia Kerja</h3>
-      <p>Tim operasional UMKM memonitor stok dan omzet harian melalui Google Sheet kolaboratif.</p>
-      <div data-wajib-s2="google_sheet">
-      <h3>Analitik data sekolah</h3><p>Gunakan <code>IMPORTRANGE</code> dan <code>QUERY</code> untuk pola database-style dari beberapa sheet.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🛠️ Section 3: Contoh step-by-step</h2>
-      <h3>Langkah 1: Struktur data</h3><p>Susun kolom transaksi.</p><pre><code>A1:Tanggal | B1:Produk | C1:Qty | D1:Harga | E1:Total
-E2 = C2*D2</code></pre><h3>Langkah 2: Formula logika</h3><p>Tambahkan IF dan SUM.</p><pre><code>F2 = IF(E2>=100000,"Target","Belum")
-Total Omzet = SUM(E2:E100)</code></pre><h3>Langkah 3: QUERY/Pivot</h3><p>Buat ringkasan produk.</p><pre><code>=QUERY(A1:E100, "select B, sum(E) group by B", 1)</code></pre>
-      <div data-wajib-s3="google_sheet">
-      <h3>Project dashboard</h3><p>Bangun proyek <strong>rekap nilai dashboard</strong> yang menampilkan ranking, rata-rata kelas, dan filter per mapel.</p><pre><code>=QUERY(IMPORTRANGE("URL_SHEET","Nilai!A:F"),"select Col1,avg(Col5) group by Col1",1)</code></pre>
-      </div>
-    </section>
-
-    
-
-    <section class="content">
-      <h2>🧠 Section 4: Latihan Soal</h2>
-      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Kenapa data validation penting untuk file bersama?</p></div>
-      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Kapan pivot table lebih baik daripada rumus manual?</p></div>
-      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi VLOOKUP ambil harga produk.</p><pre><code>=VLOOKUP(A2, Produk!A:B, ???, FALSE)</code></pre></div>
-      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi IF bertingkat kategori nilai.</p><pre><code>=IF(B2>=90,"A",IF(B2>=??? ,"B","C"))</code></pre></div>
-      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat dashboard penjualan bulanan dengan grafik.</p></div>
-      <div data-wajib-s4="google_sheet">
-      <p><strong>Checklist latihan:</strong> wajib ada rumus dasar, IF/VLOOKUP/HLOOKUP, conditional format, pivot, chart, serta IMPORTRANGE/QUERY.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>📚 Section 5: Referensi</h2>
-      <div class="refs">
-        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
-        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
-        <a class="ref-card" href="https://support.google.com/docs" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
-        <a class="ref-card" href="https://www.petanikode.com/google-sheet-untuk-pemula/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
-      </div>
+      <h2>📚 Daftar Isi Materi</h2>
+      <p>Pilih urutan belajar dari atas ke bawah agar pemahaman lebih kuat. Jika masih awam, kerjakan latihan dari setiap halaman sebelum lanjut.</p>
+      <div class="table-cards"><a class="toc-card" href="pengenalan.html"><strong>1. Pengenalan Google Sheet</strong><span>Interface, navigasi, format data, sort/filter.</span></a><a class="toc-card" href="formula-dasar.html"><strong>2. Formula Dasar</strong><span>SUM, AVERAGE, MAX, MIN, COUNT, COUNTIF, SUMIF.</span></a><a class="toc-card" href="formula-logika.html"><strong>3. Formula Logika</strong><span>IF, AND, OR, IFS, IFERROR, nested IF.</span></a><a class="toc-card" href="vlookup-hlookup.html"><strong>4. Lookup Functions</strong><span>VLOOKUP, HLOOKUP, INDEX+MATCH, XLOOKUP.</span></a><a class="toc-card" href="format-advanced.html"><strong>5. Format Advanced</strong><span>Conditional formatting, protect sheet, custom format.</span></a><a class="toc-card" href="pivot-chart.html"><strong>6. Pivot &amp; Chart</strong><span>Pivot table, chart, sparkline.</span></a><a class="toc-card" href="fungsi-advanced.html"><strong>7. Fungsi Advanced</strong><span>QUERY, IMPORTRANGE, ARRAYFORMULA.</span></a><a class="toc-card" href="project-1.html"><strong>8. Mini Project 1</strong><span>Rekap Nilai Otomatis.</span></a><a class="toc-card" href="project-2.html"><strong>9. Mini Project 2</strong><span>Dashboard Keuangan Sederhana.</span></a><a class="toc-card" href="project-utama.html"><strong>10. Project Utama</strong><span>Dashboard Monitoring Sekolah + Apps Script.</span></a></div>
     </section>
   </main>
+  <footer><div class="container">SMK Informatika Al-Irsyad Al-Islamiyyah Cirebon</div></footer>
 
-  <footer>
-    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
-  </footer>
 </body>
 </html>
