@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -129,40 +54,87 @@
   <header class="hero">
     <div class="container">
       <h1>🟢 Node.js</h1>
-      <p>Menjalankan JavaScript di server untuk membuat API dan layanan web.</p>
-      <span class="badge">Backend & Framework</span>
+      <p>Menjalankan JavaScript di server untuk API modern dan realtime.</p>
+      <span class="badge">Kelas XI</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>Node.js memungkinkan JavaScript berjalan di sisi server. Materi mencakup dasar event loop, modul, package manager npm, pembuatan server HTTP, dan API sederhana menggunakan Express.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Event loop non-blocking untuk I/O tinggi.</li><li>Express framework untuk REST API cepat.</li><li>Middleware untuk validasi, autentikasi, logging.</li><li>Pengelolaan package dan script menggunakan npm.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Event Loop</td><td>Mekanisme async utama Node.js.</td><td>Hindari operasi blocking.</td></tr><tr><td>Route API</td><td>Endpoint HTTP aplikasi.</td><td>Gunakan struktur /api/v1.</td></tr><tr><td>Middleware</td><td>Pemeriksaan sebelum handler.</td><td>Susun urutan dengan benar.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="nodejs">
+      <h3>Node.js wajib</h3><p>Node.js menjalankan JavaScript di server dengan konsep <strong>event loop</strong> dan <strong>non-blocking I/O</strong>.</p><p>Manajemen package melalui npm dan <code>package.json</code>. Sistem modul: <code>require</code> (CommonJS) vs <code>import</code> (ES Module).</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>Node.js seperti dapur restoran: menerima pesanan (request), memasak (proses), lalu menyajikan hasil (response).</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>Node.js seperti kasir cepat dengan antrean efisien.</li><li>Middleware seperti satpam yang memeriksa akses masuk.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Aplikasi delivery menggunakan Node.js untuk API tracking pesanan real-time.</p>
+      <div data-wajib-s2="nodejs">
+      <h3>Stack backend</h3><p>Gunakan Express untuk server, routing, middleware, koneksi database <code>mysql2</code>, dan pembuatan REST API.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>const http = require('http');
-const server = http.createServer((req, res) =&gt; {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Halo dari Node.js');
-});
-server.listen(3000);</code></pre>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Server dasar</h3><p>Jalankan server Express.</p><pre><code>// Server Express sederhana
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => res.send("Halo Node"));
+app.listen(3000);</code></pre><h3>Langkah 2: Endpoint API</h3><p>Buat endpoint daftar produk.</p><pre><code>app.get("/api/produk", (req, res) => {
+  res.json([{ nama: "Roti" }]);
+});</code></pre><h3>Langkah 3: Middleware auth</h3><p>Cek token sebelum akses route.</p><pre><code>// Memvalidasi token request
+app.use((req, res, next) => {
+  if (!req.headers["x-token"]) return res.status(401).json({ pesan: "Token wajib" });
+  next();
+});</code></pre>
+      <div data-wajib-s3="nodejs">
+      <h3>Contoh REST API</h3><pre><code>app.get('/siswa', ...);
+app.post('/siswa', ...);
+app.put('/siswa/:id', ...);
+app.delete('/siswa/:id', ...);
+// middleware auth/logging dipasang sebelum handler</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Kapan arsitektur event-driven menjadi keunggulan utama?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Apa dampak middleware auth diletakkan di bawah route penting?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi endpoint POST produk.</p><pre><code>app.post("/api/produk", (req, res) => {
+  const data = ???;
+  res.status(201).json(data);
+});</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi middleware logging method+path.</p><pre><code>app.use((req, res, next) => {
+  console.log(`${req.method} ???`);
+  next();
+});</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat API kasir mini (produk, transaksi, laporan).</p></div>
+      <div data-wajib-s4="nodejs">
+      <p><strong>Checklist latihan:</strong> harus mencakup express server, middleware, mysql2, serta endpoint GET/POST/PUT/DELETE.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat server Node.js yang menampilkan teks profil kelas.</li><li>Tambahkan endpoint `/status` yang mengembalikan JSON sederhana.</li><li>Jelaskan perbedaan `dependencies` dan `devDependencies`.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=nodejs+dasar+indonesia" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Node.js Dasar</span></a><a class="ref-card" href="https://nodejs.dev/en/learn/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Node.js Introduction</span></a><a class="ref-card" href="https://nodejs.org/docs/latest/api/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Official Node.js Docs</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://nodejs.org/en/docs" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://www.petanikode.com/nodejs-dasar/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -128,44 +53,85 @@
 
   <header class="hero">
     <div class="container">
-      <h1>🗺️ Flowchart</h1>
-      <p>Membantu siswa memahami alur keputusan sebelum implementasi kode.</p>
-      <span class="badge">Dasar Pemrograman</span>
+      <h1>🔀 Flowchart</h1>
+      <p>Memvisualisasikan alur solusi agar mudah dipahami sebelum diubah menjadi kode.</p>
+      <span class="badge">Kelas X</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>Flowchart digunakan untuk menggambarkan alur proses menggunakan simbol seperti terminator, process, input/output, dan decision. Siswa akan memahami bagaimana sebuah program berjalan dari awal sampai akhir, termasuk percabangan dan perulangan.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Simbol utama flowchart: terminator, process, decision, input/output.</li><li>Aturan alur: satu arah, minim garis silang, label jelas.</li><li>Flowchart membantu validasi logika sebelum coding.</li><li>Flowchart bisa diturunkan menjadi pseudocode terstruktur.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Terminator</td><td>Simbol mulai/selesai.</td><td>Wajib ada di awal dan akhir.</td></tr><tr><td>Decision</td><td>Titik percabangan kondisi.</td><td>Pastikan cabang Ya/Tidak jelas.</td></tr><tr><td>Process</td><td>Langkah proses utama.</td><td>Gunakan kata kerja aktif.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="flowchart">
+      <h3>Tabel simbol lengkap</h3><table><thead><tr><th>Simbol</th><th>Fungsi</th></tr></thead><tbody><tr><td>Terminal</td><td>Mulai/Selesai proses.</td></tr><tr><td>Proses</td><td>Langkah pengolahan data.</td></tr><tr><td>Keputusan</td><td>Percabangan Ya/Tidak.</td></tr><tr><td>Input/Output</td><td>Menerima atau menampilkan data.</td></tr><tr><td>Connector</td><td>Menyambungkan alur antarbagian/halaman.</td></tr></tbody></table><p>Aturan: alur atas-ke-bawah/kiri-ke-kanan, satu simbol satu fungsi, panah harus jelas, dan keputusan minimal dua cabang.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>Flowchart seperti peta perjalanan. Kita tahu dari titik mulai, persimpangan mana yang harus dipilih, sampai tujuan akhir.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>Seperti peta perjalanan dengan titik belok keputusan.</li><li>Seperti SOP piket kelas agar urutan kerja tidak tertukar.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Analis sistem membuat flowchart proses klaim agar user, manajer, dan programmer punya pemahaman alur yang sama.</p>
+      <div data-wajib-s2="flowchart">
+      <h3>Jenis flowchart</h3><p><strong>Flowchart sistem</strong> menggambarkan alur antarunit (user, aplikasi, database). <strong>Flowchart program</strong> fokus ke logika detail kode pada satu modul.</p><p>Kasus nyata: flowchart <strong>login</strong>, <strong>cek kelulusan</strong>, dan proses <strong>ATM</strong> (cek saldo/tarik tunai).</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>Mulai
-  ↓
-Input nilai
-  ↓
-Apakah nilai &gt;= 75?
-  ├─ Ya → Tampilkan "Lulus"
-  └─ Tidak → Tampilkan "Remedial"
-  ↓
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Diagram teks</h3><p>Bangun flow cek kelulusan.</p><pre><code>[Mulai] -> [Input nilai] -> {nilai >= 75?}
+ Ya -> [Lulus] -> [Selesai]
+ Tidak -> [Remedial] -> [Selesai]</code></pre><h3>Langkah 2: Tambah aturan</h3><p>Masukkan syarat absensi.</p><pre><code>[Input nilai, hadir] -> {nilai>=75?}
+ Ya -> {hadir>=80?} -> [Lulus/Tidak]
+ Tidak -> [Remedial]</code></pre><h3>Langkah 3: Jadi pseudocode</h3><p>Turunkan flow ke langkah logis.</p><pre><code>Mulai
+ input nilai, hadir
+ jika nilai>=75 dan hadir>=80 maka cetak "Lulus"
+ selain itu cetak "Remedial/Tidak Lulus"
 Selesai</code></pre>
+      <div data-wajib-s3="flowchart">
+      <h3>Contoh alur singkat</h3><pre><code>Login: Start -> input user/pass -> valid? -> masuk dashboard / tampilkan error -> End
+Cek kelulusan: input nilai akhir -> nilai >= KKM? -> Lulus/Tidak Lulus
+ATM: masukkan kartu+PIN -> valid? -> pilih transaksi -> cetak struk -> End</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa flowchart penting sebelum menulis kode tim?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana menyederhanakan flowchart yang kompleks?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi flow login valid/tidak valid.</p><pre><code>[Mulai] -> [Input user,password] -> {password valid?}
+ Ya -> [???]
+ Tidak -> [???] -> [Selesai]</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi pseudocode diskon member.</p><pre><code>Mulai
+ input total, member
+ jika member="ya" maka diskon <- ???
+ selain itu diskon <- 0
+ bayar <- ???
+Selesai</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat flowchart peminjaman alat laboratorium sekolah.</p></div>
+      <div data-wajib-s4="flowchart">
+      <p><strong>Checklist latihan:</strong> gunakan simbol Terminal, Proses, Keputusan, Input/Output, dan Connector secara tepat.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Gambar flowchart menghitung keliling lingkaran.</li><li>Buat flowchart menentukan diskon berdasarkan total belanja.</li><li>Rancang flowchart proses peminjaman buku di perpustakaan.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=flowchart+pemrograman" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Flowchart Pemrograman</span></a><a class="ref-card" href="https://www.niagahoster.co.id/blog/flowchart-adalah/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Pengertian dan simbol flowchart</span></a><a class="ref-card" href="https://www.lucidchart.com/pages/flowchart-symbols-meaning-explained" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Flowchart symbols reference</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://www.visual-paradigm.com/guide/flowchart/what-is-a-flowchart/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://dev.to/fnsx/flowchart-and-pseudocode-3f7m" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

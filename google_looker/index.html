@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -128,40 +53,82 @@
 
   <header class="hero">
     <div class="container">
-      <h1>🔎 Google Looker</h1>
-      <p>Menyajikan insight bisnis melalui visualisasi data profesional.</p>
-      <span class="badge">Data Analyst</span>
+      <h1>🔍 Google Looker</h1>
+      <p>Membuat dashboard BI konsisten dengan semantic model.</p>
+      <span class="badge">Kelas XI</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>Google Looker (Looker Studio) memudahkan integrasi sumber data dan pembuatan dashboard interaktif. Materi mencakup koneksi data, pembuatan chart, filter, dan berbagi laporan.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Looker memakai semantic layer (LookML) untuk metrik konsisten.</li><li>Explore memudahkan analisis mandiri user bisnis.</li><li>Dashboard dapat dijadwalkan dan dibagikan otomatis.</li><li>Governance data mencegah definisi KPI ganda.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>LookML</td><td>Model dimensi dan measure.</td><td>Gunakan naming konsisten.</td></tr><tr><td>Explore</td><td>Antarmuka eksplorasi data.</td><td>Batasi field penting saja.</td></tr><tr><td>Dashboard</td><td>Visual KPI untuk stakeholder.</td><td>Susun dari KPI utama dahulu.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="google_looker">
+      <h3>Looker Studio dasar</h3><p>Pengantar Looker Studio untuk membuat report/dashboard dari data.</p><p>Konektor umum: Google Sheet, BigQuery, dan CSV.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>Looker seperti papan informasi digital sekolah yang selalu terupdate otomatis dari sumber data.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>Looker seperti katalog perpustakaan dengan definisi buku seragam.</li><li>Explore seperti mesin pencari internal perusahaan.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Data team SaaS membangun model churn pelanggan di Looker agar semua divisi memakai definisi sama.</p>
+      <div data-wajib-s2="google_looker">
+      <h3>Komponen dashboard</h3><p>Komponen wajib: chart, scorecard, table, filter control, serta fitur sharing/publish untuk kolaborasi.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>Langkah praktik:
-1) Buka Looker Studio
-2) Hubungkan Google Sheet
-3) Buat scorecard dan grafik
-4) Tambahkan filter kelas/semester</code></pre>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Definisi view</h3><p>Buat dimensi dan measure dasar.</p><pre><code>view: transaksi {
+  dimension: id { primary_key: yes type: number sql: ${TABLE}.id ;; }
+  measure: total_omzet { type: sum sql: ${TABLE}.total ;; }
+}</code></pre><h3>Langkah 2: Explore</h3><p>Expose model untuk dianalisis user.</p><pre><code>explore: transaksi {
+  label: "Analisis Transaksi"
+}</code></pre><h3>Langkah 3: Dashboard</h3><p>Dari explore ke visual KPI.</p><pre><code>1. Pilih dimensi tanggal dan measure total_omzet
+2. Buat line chart
+3. Simpan ke dashboard manajemen</code></pre>
+      <div data-wajib-s3="google_looker">
+      <h3>Project absensi</h3><p>Buat <strong>dashboard absensi</strong> (absensi dashboard project) berisi tingkat kehadiran bulanan, siswa sering absen, dan filter kelas/mapel.</p>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa semantic layer penting pada organisasi besar?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana mencegah definisi KPI berbeda antar tim?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi measure rata-rata transaksi di LookML.</p><pre><code>measure: rata_transaksi {
+  type: average
+  sql: ${TABLE}.??? ;;
+}</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi join explore dengan pelanggan.</p><pre><code>explore: transaksi {
+  join: pelanggan {
+    sql_on: ${transaksi.id_pelanggan} = ${pelanggan.???} ;;
+  }
+}</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang dashboard retention pelanggan per segmen.</p></div>
+      <div data-wajib-s4="google_looker">
+      <p><strong>Checklist latihan:</strong> harus ada sumber data, komponen visual utama, filter interaktif, dan simulasi publish report.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat dashboard absensi dengan filter kelas.</li><li>Tambahkan grafik perkembangan nilai per bulan.</li><li>Presentasikan insight utama dari dashboard yang dibuat.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=looker+studio+dasar" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Looker Studio Dasar</span></a><a class="ref-card" href="https://support.google.com/looker-studio/answer/6283323" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Looker Studio Overview</span></a><a class="ref-card" href="https://cloud.google.com/looker/docs" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Looker Studio Docs</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://cloud.google.com/looker/docs" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://medium.com/@lakshmi.venkataraman/getting-started-with-google-looker-b5f7d5b2f72d" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

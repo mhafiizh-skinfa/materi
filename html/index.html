@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -129,42 +54,95 @@
   <header class="hero">
     <div class="container">
       <h1>🧱 HTML</h1>
-      <p>Pondasi utama untuk membuat konten web yang rapi dan terstruktur.</p>
-      <span class="badge">Web Development</span>
+      <p>Menyusun struktur konten web yang semantik, rapi, dan mudah diakses.</p>
+      <span class="badge">Kelas X</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>HTML adalah bahasa markup untuk menyusun struktur konten web. Pada materi ini, siswa mempelajari elemen heading, paragraf, list, gambar, tautan, tabel, form, serta elemen semantik seperti header, main, section, dan footer.</p>
-    </section>
-
-    <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>HTML seperti rangka rumah. Tanpa rangka yang baik, bangunan web tidak kokoh dan sulit dikembangkan.</p>
-    </section>
-
-    <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>&lt;!DOCTYPE html&gt;
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Struktur dokumen HTML: doctype, head, body.</li><li>Elemen semantic HTML5: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>.</li><li>Komponen form: label, input, button dan atribut penting.</li><li>Prinsip aksesibilitas seperti alt text dan heading hierarchy.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Semantik</td><td>Elemen dengan makna struktur.</td><td>Gunakan sesuai fungsi konten.</td></tr><tr><td>Form</td><td>Elemen pengambil input user.</td><td>Pasangkan label dan id.</td></tr><tr><td>Media</td><td>img/video/audio untuk konten kaya.</td><td>Isi alt gambar secara deskriptif.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="html">
+      <h3>Struktur HTML5 wajib</h3><p>Dokumen selalu dimulai dari deklarasi <code>&lt;!DOCTYPE html&gt;</code> agar browser membaca standar HTML5.</p><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="id"&gt;
-  &lt;head&gt;&lt;title&gt;Profil Siswa&lt;/title&gt;&lt;/head&gt;
-  &lt;body&gt;
-    &lt;header&gt;&lt;h1&gt;Profil Saya&lt;/h1&gt;&lt;/header&gt;
-    &lt;main&gt;&lt;p&gt;Saya siswa SMK Informatika.&lt;/p&gt;&lt;/main&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>Gunakan tag semantik: <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat halaman biodata sederhana dengan elemen semantik.</li><li>Tambahkan form pendaftaran dengan input nama dan email.</li><li>Buat daftar hobi menggunakan ordered list dan unordered list.</li></ol>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>HTML seperti kerangka rumah sebelum dekorasi.</li><li>HTML seperti daftar isi buku supaya pembaca paham susunan topik.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Frontend developer marketplace menyusun struktur halaman produk agar SEO dan aksesibilitas tetap baik.</p>
+      <div data-wajib-s2="html">
+      <h3>Atribut penting di proyek nyata</h3><p>Contoh atribut yang wajib dipahami: <code>id</code>, <code>class</code>, <code>href</code>, <code>src</code>, <code>alt</code>, <code>placeholder</code>, <code>required</code>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=belajar+html+dasar" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Belajar HTML Dasar</span></a><a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>MDN HTML Guide</span></a><a class="ref-card" href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>HTML Standard</span></a></div>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Struktur dasar</h3><p>Membuat dokumen HTML valid.</p><pre><code><!DOCTYPE html>
+<html lang="id">
+<head><title>Profil</title></head>
+<body><h1>Halo HTML</h1></body>
+</html></code></pre><h3>Langkah 2: Semantik</h3><p>Menata blok konten utama.</p><pre><code><header><h1>Portal Sekolah</h1></header>
+<main><section><h2>Pengumuman</h2>
+      <div data-wajib-s3="html">
+      <h3>Contoh markup lengkap</h3><pre><code>&lt;header id="top" class="hero"&gt;...&lt;/header&gt;
+&lt;nav&gt;&lt;a href="/profil"&gt;Profil&lt;/a&gt;&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;&lt;article&gt;Konten&lt;/article&gt;&lt;/section&gt;
+  &lt;img src="foto.jpg" alt="Foto siswa" /&gt;
+  &lt;input placeholder="Nama" required /&gt;
+&lt;/main&gt;
+&lt;footer&gt;Hak cipta&lt;/footer&gt;</code></pre>
+      </div></section></main>
+<footer>© 2026</footer></code></pre><h3>Langkah 3: Form</h3><p>Membuat form sederhana.</p><pre><code><form>
+  <!-- Label membantu aksesibilitas -->
+  <label for="nama">Nama</label>
+  <input id="nama" type="text" />
+  <button type="submit">Kirim</button>
+</form></code></pre>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Kenapa elemen semantik berpengaruh pada SEO?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Apa akibat jika gambar tidak punya atribut alt?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi struktur halaman dengan nav/main/footer.</p><pre><code><body>
+  <header>???</header>
+  <main>???</main>
+  <footer>???</footer>
+</body></code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi form registrasi dengan input password.</p><pre><code><label for="password">Password</label>
+<input id="password" type="???" />
+<button>???</button></code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat halaman profil UMKM dengan katalog dan form kontak.</p></div>
+      <div data-wajib-s4="html">
+      <p><strong>Checklist latihan:</strong> tiap jawaban harus memakai struktur <code>&lt;!DOCTYPE&gt;</code>, semantik utama, dan atribut wajib sesuai fungsi.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://www.petanikode.com/html-dasar/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

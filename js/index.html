@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -129,38 +54,97 @@
   <header class="hero">
     <div class="container">
       <h1>⚡ JavaScript</h1>
-      <p>Mengubah halaman statis menjadi aplikasi yang interaktif.</p>
-      <span class="badge">Web Development</span>
+      <p>Menambahkan interaktivitas dan logika dinamis pada halaman web.</p>
+      <span class="badge">Kelas X</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>JavaScript memungkinkan website merespons aksi pengguna seperti klik, input, dan validasi form. Siswa belajar variabel, percabangan, perulangan, fungsi, DOM manipulation, dan event handling.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Variabel, tipe data, operator, kondisi, dan perulangan.</li><li>Fungsi untuk modularisasi logika.</li><li>DOM manipulation dan event handling.</li><li>Asynchronous dasar dengan Promise/async-await.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Variabel</td><td>Menyimpan data sementara.</td><td>Gunakan const jika nilai tetap.</td></tr><tr><td>Fungsi</td><td>Kumpulan logika reusable.</td><td>Buat fungsi fokus satu tugas.</td></tr><tr><td>Event</td><td>Respon aksi pengguna.</td><td>Gunakan addEventListener.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="js">
+      <h3>Variabel dan kontrol alur wajib</h3><table><thead><tr><th>Kata kunci</th><th>Scope</th><th>Dapat diubah?</th></tr></thead><tbody><tr><td>var</td><td>function scope</td><td>Ya</td></tr><tr><td>let</td><td>block scope</td><td>Ya</td></tr><tr><td>const</td><td>block scope</td><td>Tidak (referensi)</td></tr></tbody></table><p>Operator dasar dipakai bersama <code>if/else</code> dan <code>switch</code>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>JavaScript adalah listrik pada rumah web. Struktur dan desain sudah ada, lalu JS membuat semuanya hidup.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>JavaScript seperti listrik yang menghidupkan perangkat.</li><li>Event listener seperti petugas yang merespons bel sekolah.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Tim frontend membuat validasi form realtime untuk menurunkan error checkout pengguna.</p>
+      <div data-wajib-s2="js">
+      <h3>Kasus frontend nyata</h3><p>Form validasi memakai percabangan, perulangan data (<code>for</code>, <code>while</code>, <code>for...of</code>, <code>forEach</code>), lalu interaksi DOM dan API.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>const tombol = document.querySelector('#cek');
-tombol.addEventListener('click', () =&gt; {
-  alert('Belajar JavaScript itu seru!');
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Logika dasar</h3><p>Hitung total belanja.</p><pre><code>// Menghitung total belanja
+const total = 12000 * 3;
+console.log(total);</code></pre><h3>Langkah 2: Percabangan</h3><p>Tambah aturan diskon.</p><pre><code>const belanja = 150000;
+if (belanja >= 100000) {
+  console.log("Diskon 10%");
+} else {
+  console.log("Tanpa diskon");
+}</code></pre><h3>Langkah 3: Event DOM</h3><p>Ubah status saat tombol diklik.</p><pre><code>document.getElementById("btn").addEventListener("click", () => {
+  // Memperbarui status di halaman
+  document.getElementById("status").textContent = "Sudah diklik";
 });</code></pre>
+      <div data-wajib-s3="js">
+      <h3>Contoh wajib</h3><pre><code>function hitung(a, b) { return a + b; }
+const kali = (a, b) => a * b;
+
+switch (role) { case 'admin': break; default: break; }
+for (let i = 0; i < 3; i++) {}
+while (ready) {}
+for (const item of items) {}
+items.forEach((item) => console.log(item));
+
+document.getElementById('btn').addEventListener('click', async () => {
+  const card = document.querySelector('.card');
+  const res = await fetch('/api/data');
+  const data = await res.json();
+  card.textContent = data.message;
+});</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Kapan fungsi terpisah lebih baik dari inline logic?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Apa risiko validasi hanya di frontend?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi perhitungan total setelah diskon.</p><pre><code>const total = 200000;
+const diskon = total >= 100000 ? ??? : 0;
+console.log(total - diskon);</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi counter klik tombol.</p><pre><code>let klik = 0;
+btn.addEventListener("click", () => {
+  klik = ???;
+  counter.textContent = klik;
+});</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat mini aplikasi todo list.</p></div>
+      <div data-wajib-s4="js">
+      <p><strong>Checklist latihan:</strong> gunakan var/let/const, if/else/switch, loop lengkap, function+arrow, DOM API, dan Fetch API.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat tombol yang mengubah warna background saat diklik.</li><li>Validasi input nilai agar hanya angka 0-100.</li><li>Tampilkan salam otomatis berdasarkan jam lokal.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=javascript+dasar+indonesia" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: JavaScript Dasar</span></a><a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>MDN JavaScript Guide</span></a><a class="ref-card" href="https://tc39.es/ecma262/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>ECMAScript</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://www.petanikode.com/javascript-dasar/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

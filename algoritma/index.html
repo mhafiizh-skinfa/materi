@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -129,41 +54,101 @@
   <header class="hero">
     <div class="container">
       <h1>🧠 Algoritma</h1>
-      <p>Memahami pola berpikir komputasional sebelum mulai menulis kode.</p>
-      <span class="badge">Dasar Pemrograman</span>
+      <p>Belajar menyusun langkah logis, efisien, dan terukur untuk menyelesaikan masalah.</p>
+      <span class="badge">Kelas X</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>Pada materi algoritma, siswa akan belajar menyusun solusi dari masalah menjadi urutan langkah yang jelas, terukur, dan bisa dievaluasi. Fokus utamanya adalah berpikir sistematis: mulai dari memahami masalah, menentukan input dan output, lalu merancang proses yang paling efisien.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Definisi algoritma, ciri algoritma baik (jelas, berhingga, efektif).</li><li>Pola IPO (Input-Process-Output) untuk memetakan solusi.</li><li>Pseudocode sebagai jembatan dari ide ke kode.</li><li>Pengantar kompleksitas waktu untuk memilih solusi efisien.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Input</td><td>Data awal yang dibutuhkan algoritma.</td><td>Tentukan format dan batas nilai.</td></tr><tr><td>Process</td><td>Urutan langkah pemrosesan.</td><td>Pecah langkah jadi blok kecil.</td></tr><tr><td>Output</td><td>Hasil akhir yang ditampilkan.</td><td>Pastikan bisa diverifikasi.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="algoritma">
+      <h3>Materi wajib tambahan</h3>
+<ul><li>Ciri algoritma lengkap: memiliki <strong>input</strong>, menghasilkan <strong>output</strong>, langkah <strong>definiteness</strong> (jelas), <strong>finiteness</strong> (berhingga), dan <strong>effectiveness</strong> (setiap langkah dapat dikerjakan).</li><li>Metode penulisan algoritma: bahasa alami (natural language), <em>pseudocode</em>, dan <em>flowchart</em>.</li></ul>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>Algoritma itu seperti resep membuat mie instan. Jika urutannya salah, hasilnya bisa gagal. Dengan urutan yang benar, siapa pun bisa mengulang proses dan mendapat hasil yang konsisten.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>Seperti resep masakan: urutan salah membuat hasil gagal.</li><li>Seperti rute ke sekolah: jalur efisien menghemat waktu.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Tim logistik membuat algoritma rute pengiriman agar biaya operasional turun dan ketepatan waktu naik.</p>
+      <div data-wajib-s2="algoritma">
+      <h3>Contoh konteks nyata</h3><p>Di sekolah, algoritma dipakai untuk menghitung <strong>luas persegi panjang</strong>, menentukan <strong>nilai terbesar 3 angka</strong>, dan memvalidasi <strong>login user</strong> secara konsisten.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code># Contoh pseudo-code cek bilangan genap
-input angka
-if angka mod 2 == 0 then
-    tampilkan "Genap"
-else
-    tampilkan "Ganjil"
-end if</code></pre>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Definisi masalah</h3><p>Tentukan masalah menghitung rata-rata 3 nilai.</p><pre><code>1. input n1,n2,n3
+2. total <- n1+n2+n3
+3. rata <- total/3
+4. output rata</code></pre><h3>Langkah 2: Pseudocode</h3><p>Rapikan alur agar siap diimplementasi.</p><pre><code>Mulai
+ input n1,n2,n3
+ total <- n1+n2+n3
+ rata <- total/3
+ output rata
+Selesai</code></pre><h3>Langkah 3: Implementasi JS</h3><p>Uji hasil dengan data contoh.</p><pre><code>// Menghitung rata-rata tiga nilai
+const rata = (80 + 75 + 90) / 3;
+console.log(rata);</code></pre>
+      <div data-wajib-s3="algoritma">
+      <h3>Contoh wajib</h3><pre><code>// Luas persegi panjang
+input p, l
+luas <- p * l
+output luas
+
+// Nilai terbesar 3 angka
+max <- a
+if b > max then max <- b
+if c > max then max <- c
+output max
+
+// Login user
+input username, password
+if username==dataUser and password==dataPass then "berhasil" else "gagal"</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Bandingkan linear search dan binary search untuk data berbeda.</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Mengapa efisiensi algoritma penting di aplikasi berskala besar?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi pseudocode luas lingkaran.</p><pre><code>Mulai
+ input r
+ luas <- ???
+ output ???
+Selesai</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi kode penentu bilangan genap/ganjil.</p><pre><code>// Menentukan genap atau ganjil
+const angka = 21;
+if (angka % 2 === ???) {
+  console.log("Genap");
+} else {
+  console.log("???");
+}</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang algoritma antrean kantin digital dari ambil nomor sampai selesai.</p></div>
+      <div data-wajib-s4="algoritma">
+      <p><strong>Checklist latihan:</strong> pastikan jawaban menuliskan input-output, ketegasan langkah (definiteness), batas berhenti (finiteness), dan efektivitas proses.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat algoritma untuk menghitung luas persegi panjang.</li><li>Tuliskan langkah-langkah login ke sistem sekolah secara terstruktur.</li><li>Rancang algoritma sederhana untuk menentukan nilai lulus/tidak lulus.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=algoritma+dasar+pemrograman" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Algoritma Dasar untuk Pemula</span></a><a class="ref-card" href="https://www.dicoding.com/blog/apa-itu-algoritma/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Pengenalan algoritma di Dicoding</span></a><a class="ref-card" href="https://roadmap.sh/computer-science" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Computer Science Roadmap</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://www.petanikode.com/algoritma-pemrograman/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 
