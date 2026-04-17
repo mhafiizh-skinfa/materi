@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -129,42 +54,98 @@
   <header class="hero">
     <div class="container">
       <h1>🎨 CSS</h1>
-      <p>Membuat website lebih menarik, nyaman, dan responsif di berbagai perangkat.</p>
-      <span class="badge">Web Development</span>
+      <p>Mengatur tampilan web agar menarik, konsisten, dan responsif di berbagai layar.</p>
+      <span class="badge">Kelas X</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>CSS digunakan untuk mengatur visual halaman web. Siswa mempelajari selector, box model, typography, warna, positioning, flexbox, grid, dan media query agar tampilan tetap baik di desktop maupun mobile.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Dasar selector, specificity, inheritance, dan cascading.</li><li>Box model (margin, border, padding, content).</li><li>Layout modern memakai Flexbox/Grid.</li><li>Responsif dengan media query dan unit relatif.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Selector</td><td>Menarget elemen untuk diberi gaya.</td><td>Utamakan class selector.</td></tr><tr><td>Box Model</td><td>Ruang tiap elemen.</td><td>Gunakan box-sizing border-box.</td></tr><tr><td>Responsive</td><td>Adaptasi tampilan lintas layar.</td><td>Uji di mobile terlebih dahulu.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="css">
+      <h3>Box model wajib</h3><pre><code>+---------------------------+
+| margin                    |
+|  +---------------------+  |
+|  | border              |  |
+|  |  +---------------+  |  |
+|  |  | padding       |  |  |
+|  |  |  +---------+  |  |  |
+|  |  |  | content |  |  |  |
+|  |  |  +---------+  |  |  |
+|  |  +---------------+  |  |
+|  +---------------------+  |
++---------------------------+</code></pre><p>Selector lanjutan: <code>:hover</code>, <code>:focus</code>, <code>:nth-child()</code>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>CSS seperti desain interior rumah. Strukturnya tetap sama, tetapi tampilannya jadi nyaman dan indah.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>CSS seperti seragam yang membuat tampilan lebih rapi.</li><li>CSS seperti dekorasi kelas tanpa mengubah struktur ruangan.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Tim UI menerapkan design system berbasis CSS agar seluruh halaman produk konsisten.</p>
+      <div data-wajib-s2="css">
+      <h3>Kasus UI modern</h3><p>Layout dashboard biasanya menggabungkan <strong>Flexbox</strong> untuk baris/kolom cepat, <strong>Grid</strong> untuk area kompleks, <strong>CSS Variables</strong> untuk tema, dan <strong>media query</strong> untuk responsif.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>.card {
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-}
-@media (max-width: 768px) {
-  .grid { grid-template-columns: 1fr; }
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Gaya global</h3><p>Set font dan warna dasar.</p><pre><code>/* Mengatur gaya dasar */
+body { font-family: Poppins, sans-serif; color: #1f2937; }</code></pre><h3>Langkah 2: Layout flex</h3><p>Menyusun beberapa card.</p><pre><code>.cards { display: flex; gap: 12px; flex-wrap: wrap; }
+.card { flex: 1 1 220px; }</code></pre><h3>Langkah 3: Media query</h3><p>Sesuaikan teks untuk layar kecil.</p><pre><code>h1 { font-size: 2rem; }
+@media (max-width: 600px) {
+  /* Menyesuaikan ukuran judul */
+  h1 { font-size: 1.4rem; }
 }</code></pre>
+      <div data-wajib-s3="css">
+      <h3>Contoh kode wajib</h3><pre><code>:root { --primary: #667eea; --gap: 12px; }
+.menu a:hover { color: var(--primary); }
+input:focus { outline: 2px solid var(--primary); }
+.list li:nth-child(2n) { background: var(--bg); }
+
+.wrap { display: flex; gap: var(--gap); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa inline style tidak cocok untuk proyek besar?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana box model memengaruhi lebar elemen?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi hover style tombol.</p><pre><code>.btn:hover {
+  background: ???;
+  transform: ???;
+}</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi media query grid satu kolom.</p><pre><code>@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: ???;
+  }
+}</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang stylesheet landing page sekolah yang responsif.</p></div>
+      <div data-wajib-s4="css">
+      <p><strong>Checklist latihan:</strong> sertakan pseudo-class, Flexbox/Grid, variabel CSS, dan media query.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Ubah halaman HTML menjadi 2 kolom menggunakan CSS Grid.</li><li>Buat tombol dengan efek hover halus.</li><li>Terapkan media query agar layout mobile lebih rapi.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=css+dasar+flexbox" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: CSS Dasar sampai Flexbox</span></a><a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>MDN CSS Guide</span></a><a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>CSS Reference</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://dev.to/diwakarkr/learn-css-flexbox-in-10-minutes-57cd" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -128,40 +53,80 @@
 
   <header class="hero">
     <div class="container">
-      <h1>🗂️ Data</h1>
-      <p>Dasar penting sebelum melakukan analisis data lanjutan.</p>
-      <span class="badge">Data Analyst</span>
+      <h1>🧮 Data</h1>
+      <p>Memahami siklus data dari pengumpulan hingga pengambilan keputusan.</p>
+      <span class="badge">Kelas XI</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>Materi data membahas jenis data (numerik, kategorikal), kualitas data, data cleaning, serta konsep data-driven decision. Siswa belajar bahwa analisis yang baik dimulai dari data yang benar.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Jenis data: terstruktur, semi-terstruktur, tidak terstruktur.</li><li>Kualitas data: akurat, lengkap, konsisten, tepat waktu.</li><li>Data lifecycle: collect, clean, analyze, communicate.</li><li>Etika data: privasi, persetujuan, dan keamanan.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Data Mentah</td><td>Data asli dari sumber.</td><td>Jangan langsung dipakai analisis.</td></tr><tr><td>Data Bersih</td><td>Data setelah cleaning/validasi.</td><td>Dokumentasikan langkah cleaning.</td></tr><tr><td>Insight</td><td>Kesimpulan untuk aksi bisnis.</td><td>Hubungkan dengan keputusan nyata.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="data">
+      <h3>Konsep data wajib</h3><p><strong>Data</strong> adalah fakta mentah untuk diolah menjadi informasi; inilah jawaban sederhana untuk pertanyaan <em>what is data</em>.</p><p>Jenis data: <strong>kualitatif vs kuantitatif</strong>, serta <strong>structured vs unstructured</strong>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>Data seperti bahan masakan. Jika bahan tidak segar, hasil masakan juga tidak maksimal.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>Data seperti bahan baku makanan: kualitas menentukan hasil.</li><li>Data lifecycle seperti proses produksi dari gudang ke konsumen.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Tim marketing mengevaluasi efektivitas kampanye iklan berdasarkan data konversi.</p>
+      <div data-wajib-s2="data">
+      <h3>Lifecycle data</h3><p>Alur: <strong>collect → clean → analyze → visualize → act</strong>. Tahap cleaning meliputi penanganan missing value, duplicate, dan outlier.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>Langkah data cleaning dasar:
-- Hapus duplikat
-- Tangani nilai kosong
-- Standarkan format tanggal
-- Validasi rentang nilai</code></pre>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Klasifikasi data</h3><p>Identifikasi tipe data tiap kolom.</p><pre><code>Kolom umur: numerik
+Kolom kota: kategorikal
+Kolom tanggal: datetime</code></pre><h3>Langkah 2: Cleaning</h3><p>Tetapkan aturan pembersihan data.</p><pre><code>1. Hapus duplikat id_transaksi
+2. Isi null kategori dengan "Tidak diketahui"
+3. Samakan format tanggal</code></pre><h3>Langkah 3: Insight</h3><p>Tarik kesimpulan dari pola data.</p><pre><code>Jika 60% omzet dari 2 produk utama,
+prioritaskan stok dan promosi kedua produk tersebut.</code></pre>
+      <div data-wajib-s3="data">
+      <h3>Analisis dasar</h3><p>Statistik deskriptif (mean, median, modus, sebaran), tools (Spreadsheet, SQL, Python, BI), serta etika data (privasi, bias, keamanan) harus selalu dibahas.</p>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Apa dampak bisnis dari data banyak nilai kosong?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana menyeimbangkan analitik dan privasi pengguna?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi checklist validasi data harian.</p><pre><code>Checklist:
+- Cek jumlah baris ???
+- Cek null kolom ???
+- Cek duplikasi id ???</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi pseudocode pembersihan duplikasi data.</p><pre><code>Mulai
+ baca data
+ hapus duplikat berdasarkan ???
+ simpan hasil ke ???
+Selesai</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang alur data sistem peminjaman buku digital.</p></div>
+      <div data-wajib-s4="data">
+      <p><strong>Checklist latihan:</strong> jawaban harus menunjukkan klasifikasi data, lifecycle lengkap, cleaning, statistik deskriptif, tools, dan etika.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Identifikasi 5 masalah kualitas data dari dataset sederhana.</li><li>Lakukan pembersihan data nama siswa yang tidak konsisten.</li><li>Kelompokkan kolom data menjadi numerik dan kategorikal.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=dasar+data+analyst" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Dasar Data Analyst</span></a><a class="ref-card" href="https://www.ibm.com/think/topics/data-quality" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>What is Data Quality</span></a><a class="ref-card" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Google Data Analytics Resources</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://cloud.google.com/learn/what-is-data" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://dev.to/sammybarasa/data-cleaning-for-beginners-2m10" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -129,38 +54,97 @@
   <header class="hero">
     <div class="container">
       <h1>🐘 PHP</h1>
-      <p>Membangun aplikasi web dinamis yang terhubung ke database.</p>
-      <span class="badge">Backend & Framework</span>
+      <p>Membangun website dinamis di sisi server dengan logika backend.</p>
+      <span class="badge">Kelas XI</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>PHP banyak digunakan untuk membuat website dinamis. Materi meliputi sintaks dasar, variabel, array, fungsi, form handling, dan koneksi database menggunakan MySQLi atau PDO.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>PHP berjalan di server untuk menghasilkan halaman dinamis.</li><li>Dasar sintaks: variabel, kondisi, loop, fungsi.</li><li>Mengelola request dengan $_GET, $_POST, $_SESSION.</li><li>Keamanan dasar: validasi input dan prepared statement.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Routing Sederhana</td><td>Pemetaan URL ke file/controller.</td><td>Gunakan whitelist halaman.</td></tr><tr><td>Form Handling</td><td>Menerima data user.</td><td>Sanitasi semua input.</td></tr><tr><td>Session</td><td>Menyimpan status login.</td><td>Atur timeout session.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="php">
+      <h3>Dasar PHP wajib</h3><p>Alur server-side: browser kirim request → web server menjalankan PHP → PHP akses database → response HTML/JSON kembali ke browser.</p><p>Setup lokal umum: instal <strong>XAMPP</strong>, aktifkan Apache & MySQL, simpan proyek di <code>htdocs</code>.</p><p>Materi sintaks: variabel, tipe data, operator, kondisional, loop, function, <code>include</code>/<code>require</code>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>PHP seperti petugas administrasi online: menerima form dari pengguna, memprosesnya, lalu menyimpan data ke sistem.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>PHP seperti dapur restoran: proses terjadi di belakang layar.</li><li>PHP seperti petugas administrasi yang memproses formulir.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Portal akademik memakai PHP untuk login guru, input nilai, dan cetak raport.</p>
+      <div data-wajib-s2="php">
+      <h3>Kasus backend web</h3><p>Proyek login sekolah memakai pemrosesan form, CRUD MySQL (Create/Read/Update/Delete), serta <strong>session</strong> dan <strong>cookie</strong> untuk autentikasi.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>&lt;?php
-$nama = 'Siswa XI RPL';
-echo 'Selamat belajar, ' . $nama;
-?&gt;</code></pre>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Output dinamis</h3><p>Menampilkan variabel ke browser.</p><pre><code><?php
+// Menampilkan salam dinamis
+$nama = "Rina";
+echo "Halo, $nama";
+?></code></pre><h3>Langkah 2: Ambil data form</h3><p>Membaca input POST dengan aman.</p><pre><code><?php
+// Mengambil data nama dari form
+$nama = $_POST["nama"] ?? "";
+echo htmlspecialchars($nama);
+?></code></pre><h3>Langkah 3: Query PDO</h3><p>Akses database memakai prepared statement.</p><pre><code><?php
+// Query aman menggunakan PDO
+$stmt = $pdo->prepare("SELECT * FROM siswa WHERE kelas = ?");
+$stmt->execute(["XI RPL"]);
+?></code></pre>
+      <div data-wajib-s3="php">
+      <h3>Contoh alur login + CRUD</h3><pre><code>// include koneksi
+require 'koneksi.php';
+session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $user = $_POST['username'];
+  $pass = $_POST['password'];
+  // validasi login lalu set $_SESSION['user']
+}
+// CRUD: INSERT, SELECT, UPDATE, DELETE tabel siswa</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa prepared statement mencegah SQL injection?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Apa risiko session tanpa regenerasi ID?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi validasi email di PHP.</p><pre><code><?php
+$email = $_POST["email"] ?? "";
+if (filter_var($email, ???)) {
+  echo "Valid";
+} else {
+  echo "???";
+}
+?></code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi query insert PDO data siswa.</p><pre><code><?php
+$stmt = $pdo->prepare("INSERT INTO siswa(nama, kelas) VALUES(?, ?)");
+$stmt->execute([???, ???]);
+?></code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat modul login + dashboard guru sederhana.</p></div>
+      <div data-wajib-s4="php">
+      <p><strong>Checklist latihan:</strong> latihan harus mencakup form processing, query CRUD, dan skenario login berbasis session/cookie.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat form sederhana dan tampilkan kembali data input pengguna.</li><li>Simpan data form ke tabel MySQL.</li><li>Buat fungsi PHP untuk menghitung total nilai rata-rata.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=php+dasar+indonesia" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: PHP Dasar</span></a><a class="ref-card" href="https://phptherightway.com/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>PHP The Right Way</span></a><a class="ref-card" href="https://www.php.net/docs.php" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>PHP Manual</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://www.php.net/docs.php" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://www.petanikode.com/php-dasar/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 

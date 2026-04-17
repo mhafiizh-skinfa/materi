@@ -8,115 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --bg: #f5f7ff;
-      --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
     .container { width: min(980px, 92%); margin: 0 auto; }
-    nav {
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 10px;
-    }
-    .back {
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
+    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
+    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
     .title-nav { font-weight: 700; }
-    .hero {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 52px 0;
-    }
+    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
     .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
     .hero p { margin-top: 10px; max-width: 760px; }
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: rgba(255, 255, 255, .2);
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: .82rem;
-      font-weight: 700;
-    }
+    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
     main { padding: 28px 0 40px; }
-    section.content {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 16px;
-    }
-    section.content h2 {
-      margin: 0 0 8px;
-      font-size: 1.14rem;
-    }
-    pre {
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-      border-radius: 10px;
-      overflow-x: auto;
-      padding: 14px;
-    }
+    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
+    h3 { margin: 14px 0 8px; }
+    ul, ol { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
     code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    ol { margin: 0; padding-left: 20px; }
-    .refs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
-    }
-    .ref-card {
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      background: #fff;
-      transition: transform .22s ease;
-    }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid var(--border); padding: 10px; }
+    th { background: var(--primary); color: #fff; }
+    tr:nth-child(even) { background: var(--bg); }
+    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
+    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
     .ref-card:hover { transform: translateY(-3px); }
     .ref-card strong { display: block; margin-bottom: 4px; }
     .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-  </style>
+    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
+</style>
 </head>
 <body>
   <nav>
@@ -128,39 +53,83 @@
 
   <header class="hero">
     <div class="container">
-      <h1>🔺 Laravel</h1>
-      <p>Mempercepat pengembangan dengan arsitektur MVC dan tooling lengkap.</p>
-      <span class="badge">Backend & Framework</span>
+      <h1>🧰 Laravel</h1>
+      <p>Framework PHP modern untuk pengembangan fullstack berbasis MVC.</p>
+      <span class="badge">Kelas XI</span>
     </div>
   </header>
 
   <main class="container">
     <section class="content">
-      <h2>📖 Penjelasan Mendalam</h2>
-      <p>Laravel menyediakan struktur proyek yang rapi, routing, controller, model, migration, ORM Eloquent, dan sistem autentikasi. Materi ini fokus pada praktik membangun aplikasi CRUD yang maintainable.</p>
+      <h2>📖 Section 1: Penjelasan mendalam</h2>
+      <h3>Konsep Inti</h3>
+      <ul><li>Arsitektur MVC: Route-Controller-Model-View.</li><li>Eloquent ORM untuk query berbasis model.</li><li>Migration dan seeder untuk versi database.</li><li>Validasi request dan autentikasi bawaan framework.</li></ul>
+      <h3>Ringkasan Komponen</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
+        <tbody><tr><td>Route</td><td>Pintu masuk request web/API.</td><td>Kelompokkan per fitur.</td></tr><tr><td>Controller</td><td>Tempat logika bisnis.</td><td>Jangan campur tampilan.</td></tr><tr><td>Model</td><td>Representasi tabel database.</td><td>Atur fillable/guarded.</td></tr></tbody>
+      </table>
+      <div data-wajib-s1="laravel">
+      <h3>Laravel inti</h3><p><strong>Laravel</strong> adalah framework PHP berbasis <strong>MVC</strong>; dipilih karena routing rapi, keamanan baik, dan tooling lengkap.</p><p>Instalasi: <code>composer create-project laravel/laravel app</code> atau Laravel Installer.</p><p>Struktur folder penting: <code>app/</code>, <code>routes/</code>, <code>resources/views/</code>, <code>database/</code>, <code>public/</code>.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💡 Analogi &amp; Contoh</h2>
-      <p>Laravel seperti paket bangunan rumah siap pakai: fondasi, dinding, dan instalasi sudah tersedia, tinggal disesuaikan kebutuhan.</p>
+      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
+      <h3>Analogi Sehari-hari</h3>
+      <ul><li>Laravel seperti rangka rumah siap pakai untuk backend modern.</li><li>MVC seperti pembagian tugas tim proyek yang jelas.</li></ul>
+      <h3>Kasus Dunia Kerja</h3>
+      <p>Startup edukasi membangun LMS dengan Laravel untuk manajemen kelas, materi, dan pembayaran.</p>
+      <div data-wajib-s2="laravel">
+      <h3>Komponen kerja Laravel</h3><p>Routing: <code>Route::get()</code>, <code>Route::resource()</code>; Controller CRUD; Model Eloquent relasi <code>hasMany</code>/<code>belongsTo</code>; Blade layout/component/directive; migration & seeder; middleware auth dengan Laravel Breeze.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>💻 Contoh Praktik</h2>
-      <pre><code>// routes/web.php
-Route::get('/halo', function () {
-    return 'Halo dari Laravel';
-});</code></pre>
+      <h2>🛠️ Section 3: Contoh step-by-step</h2>
+      <h3>Langkah 1: Buat route</h3><p>Definisikan route awal aplikasi.</p><pre><code>// routes/web.php
+Route::get("/", fn () => view("welcome"));</code></pre><h3>Langkah 2: Controller + model</h3><p>Ambil data siswa dari database.</p><pre><code>// Mengambil data siswa
+public function index() {
+  $siswa = Siswa::all();
+  return view("siswa.index", compact("siswa"));
+}</code></pre><h3>Langkah 3: Blade view</h3><p>Render data dalam tampilan.</p><pre><code>{{-- Menampilkan daftar siswa --}}
+@foreach($siswa as $item)
+  <li>{{ $item->nama }}</li>
+@endforeach</code></pre>
+      <div data-wajib-s3="laravel">
+      <h3>Contoh proyek fullstack</h3><p>Bangun aplikasi tugas siswa CRUD + auth (CRUD+auth), sediakan endpoint API dengan response JSON, lalu deployment ke shared hosting (set document root ke <code>public/</code>).</p><pre><code>return response()->json([
+  'message' => 'Data tugas berhasil disimpan',
+  'data' => $tugas
+]);</code></pre>
+      </div>
+    </section>
+
+    
+
+    <section class="content">
+      <h2>🧠 Section 4: Latihan Soal</h2>
+      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa MVC penting saat proyek berkembang?</p></div>
+      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana migration membantu kolaborasi tim?</p></div>
+      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi route resource siswa.</p><pre><code>Route::resource("siswa", ???);</code></pre></div>
+      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi method store dengan validasi.</p><pre><code>public function store(Request $request) {
+  $data = $request->validate(["nama"=>"required","kelas"=>"required"]);
+  Siswa::create($data);
+  return redirect()->route("???");
+}</code></pre></div>
+      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat CRUD inventaris lab dengan pencarian dan pagination.</p></div>
+      <div data-wajib-s4="laravel">
+      <p><strong>Checklist latihan:</strong> wajib ada resource route, controller CRUD, relasi model, blade, migration+seeder, middleware auth, dan endpoint API JSON.</p>
+      </div>
     </section>
 
     <section class="content">
-      <h2>✏️ Latihan Soal</h2>
-      <ol><li>Buat project Laravel dan tampilkan halaman welcome custom.</li><li>Buat migration tabel `posts` lalu jalankan migrate.</li><li>Buat fitur CRUD sederhana untuk data siswa.</li></ol>
-    </section>
-
-    <section class="content">
-      <h2>📚 Referensi Belajar</h2>
-      <div class="refs"><a class="ref-card" href="https://www.youtube.com/results?search_query=laravel+dasar+indonesia" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Cari: Laravel Dasar</span></a><a class="ref-card" href="https://laravel-news.com/" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Laravel News Tutorials</span></a><a class="ref-card" href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi</strong><span>Laravel Documentation</span></a></div>
+      <h2>📚 Section 5: Referensi</h2>
+      <div class="refs">
+        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
+        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
+        <a class="ref-card" href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
+        <a class="ref-card" href="https://medium.com/@techvblogs/laravel-for-beginners-d6de9f11f6f8" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
+      </div>
     </section>
   </main>
 
