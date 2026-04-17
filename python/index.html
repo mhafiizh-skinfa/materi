@@ -3,136 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python | Materi Pembelajaran Pemrograman</title>
+  <title>Python | Materi Pemrograman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    .container { width: min(980px, 92%); margin: 0 auto; }
-    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
-    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
-    .title-nav { font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
-    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .hero p { margin-top: 10px; max-width: 760px; }
-    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
-    main { padding: 28px 0 40px; }
-    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
-    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
-    h3 { margin: 14px 0 8px; }
-    ul, ol { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
-    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid var(--border); padding: 10px; }
-    th { background: var(--primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg); }
-    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
-    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
-    .ref-card:hover { transform: translateY(-3px); }
-    .ref-card strong { display: block; margin-bottom: 4px; }
-    .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
-</style>
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
 </head>
 <body>
+
   <nav>
     <div class="container nav-wrap">
       <a class="back" href="../index.html">← Kembali</a>
-      <div class="title-nav">Python</div>
+      <strong>Python</strong>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container">
       <h1>🐍 Python</h1>
-      <p>Bahasa serbaguna untuk automasi, analisis data, dan backend.</p>
+      <p>Daftar isi sub-halaman materi Python yang disusun bertahap dari konsep dasar sampai project nyata.</p>
       <span class="badge">Kelas XI</span>
     </div>
   </header>
-
   <main class="container">
     <section class="content">
-      <h2>📖 Section 1: Penjelasan mendalam</h2>
-      <h3>Konsep Inti</h3>
-      <ul><li>Sintaks Python yang ringkas dan mudah dibaca.</li><li>Struktur data list, dict, tuple, set.</li><li>Function, loop, dan kondisi untuk otomasi tugas.</li><li>Penerapan Python pada data analysis dan backend.</li></ul>
-      <h3>Ringkasan Komponen</h3>
-      <table>
-        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
-        <tbody><tr><td>List</td><td>Data berurutan dan mutable.</td><td>Pakai untuk koleksi dinamis.</td></tr><tr><td>Dict</td><td>Key-value mapping.</td><td>Cocok untuk data berlabel.</td></tr><tr><td>Function</td><td>Kode reusable.</td><td>Tambahkan parameter jelas.</td></tr></tbody>
-      </table>
-      <div data-wajib-s1="python">
-      <h3>Python dasar wajib</h3><p>Materi sintaks dasar dan struktur data: <code>list</code>, <code>dict</code>, <code>tuple</code>, <code>set</code>. Lanjut function, <code>lambda</code>, dan <em>list comprehension</em>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
-      <h3>Analogi Sehari-hari</h3>
-      <ul><li>Python seperti bahasa percakapan yang sederhana namun kuat.</li><li>Dict seperti laci berlabel untuk penyimpanan cepat.</li></ul>
-      <h3>Kasus Dunia Kerja</h3>
-      <p>Data analyst membersihkan data penjualan harian menggunakan script Python.</p>
-      <div data-wajib-s2="python">
-      <h3>Aplikasi praktis</h3><p>Topik lanjutan: OOP Python, file handling, GUI dengan <strong>tkinter</strong>, analisis data memakai <strong>pandas</strong>, visualisasi dengan <strong>matplotlib</strong>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🛠️ Section 3: Contoh step-by-step</h2>
-      <h3>Langkah 1: Variabel</h3><p>Menampilkan data sederhana.</p><pre><code># Menampilkan identitas
-nama = "Salsa"
-print(f"Halo {nama}")</code></pre><h3>Langkah 2: Loop</h3><p>Iterasi data produk.</p><pre><code>produk = ["Roti", "Susu", "Kopi"]
-for item in produk:
-    print(item)</code></pre><h3>Langkah 3: Function</h3><p>Membuat fungsi hitung diskon.</p><pre><code>def hitung_total(harga, diskon):
-    # Menghitung total setelah diskon
-    return harga - (harga * diskon / 100)</code></pre>
-      <div data-wajib-s3="python">
-      <h3>Project wajib</h3><p>Project 1: aplikasi <strong>catatan Tkinter</strong>. Project 2: <strong>analisis nilai</strong> menggunakan pandas + matplotlib.</p><pre><code># list comprehension
-lulus = [n for n in nilai if n >= 75]
-# lambda
-urut = sorted(nilai, key=lambda x: x, reverse=True)</code></pre>
-      </div>
-    </section>
-
-    
-
-    <section class="content">
-      <h2>🧠 Section 4: Latihan Soal</h2>
-      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa Python populer untuk analisis data?</p></div>
-      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Kapan dict lebih tepat daripada list?</p></div>
-      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi function rata-rata nilai.</p><pre><code>def rata(nilai):
-    return sum(nilai) / ???</code></pre></div>
-      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi loop nilai > 80.</p><pre><code>nilai = [70, 85, 90, 60]
-for n in nilai:
-    if n > ???:
-        print(n)</code></pre></div>
-      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Buat aplikasi inventaris kelas berbasis CLI.</p></div>
-      <div data-wajib-s4="python">
-      <p><strong>Checklist latihan:</strong> latihan mencakup struktur data, fungsi/lambda, OOP, file handling, Tkinter, dan pandas/matplotlib.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>📚 Section 5: Referensi</h2>
-      <div class="refs">
-        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
-        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
-        <a class="ref-card" href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
-        <a class="ref-card" href="https://dev.to/sachingeek/python-for-beginners-53df" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
-      </div>
+      <h2>📚 Daftar Isi Materi</h2>
+      <p>Pilih urutan belajar dari atas ke bawah agar pemahaman lebih kuat. Jika masih awam, kerjakan latihan dari setiap halaman sebelum lanjut.</p>
+      <div class="table-cards"><a class="toc-card" href="pengenalan.html"><strong>1. Pengenalan Python</strong><span>Install Python, first program, indentation.</span></a><a class="toc-card" href="tipe-data-variabel.html"><strong>2. Tipe Data &amp; Variabel Python</strong><span>Tipe data, f-string, konversi tipe.</span></a><a class="toc-card" href="operator-input.html"><strong>3. Operator &amp; Input Python</strong><span>Operator, input(), format output.</span></a><a class="toc-card" href="kondisional.html"><strong>4. Kondisional Python</strong><span>if/elif/else dan contoh grade.</span></a><a class="toc-card" href="loop.html"><strong>5. Perulangan Python</strong><span>for/while, list comprehension, enumerate, zip.</span></a><a class="toc-card" href="struktur-data.html"><strong>6. Struktur Data Python</strong><span>List, Tuple, Dict, Set dan kapan memakai.</span></a><a class="toc-card" href="function.html"><strong>7. Function Python</strong><span>def, parameter, lambda, map/filter.</span></a><a class="toc-card" href="oop-python.html"><strong>8. OOP Python</strong><span>Class, inheritance, dunder methods, property.</span></a><a class="toc-card" href="file-handling.html"><strong>9. File Handling Python</strong><span>open(), CSV module, JSON module.</span></a><a class="toc-card" href="tkinter.html"><strong>10. Tkinter Python</strong><span>Widget, geometry manager, event binding.</span></a><a class="toc-card" href="pandas.html"><strong>11. Pandas Python</strong><span>DataFrame, read CSV, filter, groupby, merge.</span></a><a class="toc-card" href="matplotlib.html"><strong>12. Matplotlib Python</strong><span>Line/bar/pie/scatter dan subplot.</span></a><a class="toc-card" href="numpy.html"><strong>13. NumPy Python</strong><span>Array, vectorization, math functions.</span></a><a class="toc-card" href="project-1.html"><strong>14. Mini Project 1</strong><span>Aplikasi Catatan dengan Tkinter.</span></a><a class="toc-card" href="project-2.html"><strong>15. Mini Project 2</strong><span>Analisis Nilai Siswa (Pandas + Matplotlib).</span></a><a class="toc-card" href="project-utama.html"><strong>16. Project Utama</strong><span>Dashboard Analisis Penjualan + PDF report.</span></a></div>
     </section>
   </main>
+  <footer><div class="container">SMK Informatika Al-Irsyad Al-Islamiyyah Cirebon</div></footer>
 
-  <footer>
-    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
-  </footer>
 </body>
 </html>

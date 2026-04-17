@@ -3,134 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DFD | Materi Pembelajaran Pemrograman</title>
+  <title>DFD | Materi Pemrograman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    .container { width: min(980px, 92%); margin: 0 auto; }
-    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
-    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
-    .title-nav { font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
-    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .hero p { margin-top: 10px; max-width: 760px; }
-    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
-    main { padding: 28px 0 40px; }
-    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
-    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
-    h3 { margin: 14px 0 8px; }
-    ul, ol { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
-    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid var(--border); padding: 10px; }
-    th { background: var(--primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg); }
-    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
-    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
-    .ref-card:hover { transform: translateY(-3px); }
-    .ref-card strong { display: block; margin-bottom: 4px; }
-    .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
-</style>
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
 </head>
 <body>
+
   <nav>
     <div class="container nav-wrap">
       <a class="back" href="../index.html">← Kembali</a>
-      <div class="title-nav">DFD</div>
+      <strong>DFD</strong>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container">
-      <h1>🗺️ DFD</h1>
-      <p>Memetakan arus data sistem agar proses bisnis mudah dianalisis.</p>
+      <h1>🔄 DFD</h1>
+      <p>Daftar isi sub-halaman materi DFD yang disusun bertahap dari konsep dasar sampai project nyata.</p>
       <span class="badge">Kelas XI</span>
     </div>
   </header>
-
   <main class="container">
     <section class="content">
-      <h2>📖 Section 1: Penjelasan mendalam</h2>
-      <h3>Konsep Inti</h3>
-      <ul><li>Komponen DFD: external entity, process, data store, data flow.</li><li>Level DFD: context diagram, level 0, level 1.</li><li>DFD fokus arus data, bukan urutan kontrol seperti flowchart.</li><li>Penamaan proses dan data flow harus konsisten.</li></ul>
-      <h3>Ringkasan Komponen</h3>
-      <table>
-        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
-        <tbody><tr><td>External Entity</td><td>Aktor di luar sistem.</td><td>Contoh: Siswa/Admin.</td></tr><tr><td>Process</td><td>Transformasi data.</td><td>Gunakan format kata kerja.</td></tr><tr><td>Data Store</td><td>Penyimpanan data.</td><td>Selaraskan dengan DB nyata.</td></tr></tbody>
-      </table>
-      <div data-wajib-s1="DFD">
-      <h3>Elemen DFD wajib</h3><ul><li><strong>Entitas eksternal</strong>: pihak luar sistem.</li><li><strong>Proses</strong>: transformasi data.</li><li><strong>Data store</strong>: penyimpanan data.</li><li><strong>Arus data</strong>: aliran informasi antar elemen.</li></ul>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
-      <h3>Analogi Sehari-hari</h3>
-      <ul><li>DFD seperti jalur paket dari pengirim ke penerima.</li><li>DFD seperti alur surat masuk dari TU ke kepala sekolah.</li></ul>
-      <h3>Kasus Dunia Kerja</h3>
-      <p>System analyst menyusun DFD PPDB online agar tim memahami alur data pendaftaran dan verifikasi.</p>
-      <div data-wajib-s2="DFD">
-      <h3>Level DFD</h3><p><strong>Context Diagram (Level 0)</strong> menampilkan sistem sebagai satu proses besar. <strong>Level 1</strong> memecah proses utama. <strong>Level 2</strong> merinci subproses kritis.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🛠️ Section 3: Contoh step-by-step</h2>
-      <h3>Langkah 1: Context diagram</h3><p>Tampilkan sistem sebagai 1 proses utama.</p><pre><code>[Siswa] --Data--> (Sistem PPDB) --Status--> [Siswa]
-[Admin] --Verifikasi--> (Sistem PPDB)</code></pre><h3>Langkah 2: DFD level 0</h3><p>Pecah proses utama jadi subproses.</p><pre><code>P1 Terima Form
-P2 Verifikasi Berkas
-P3 Umumkan Hasil
-Data Store: D1 Data Pendaftar</code></pre><h3>Langkah 3: Pseudocode proses</h3><p>Uji logika verifikasi.</p><pre><code>Mulai
- input data
- jika berkas lengkap maka status <- "Lolos"
- selain itu status <- "Perbaiki"
- simpan status
-Selesai</code></pre>
-      <div data-wajib-s3="DFD">
-      <h3>Kesalahan umum</h3><ul><li>Arus data tanpa nama.</li><li>Entitas eksternal dihubungkan langsung ke data store tanpa proses.</li><li>Level 1/2 tidak seimbang dengan context diagram.</li></ul>
-      </div>
-    </section>
-
-    
-
-    <section class="content">
-      <h2>🧠 Section 4: Latihan Soal</h2>
-      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Mengapa context diagram wajib dibuat lebih dulu?</p></div>
-      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Apa beda fungsi DFD dan flowchart?</p></div>
-      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi context diagram perpustakaan digital.</p><pre><code>[Siswa] --Pinjam Buku--> (???) --Status--> [Siswa]</code></pre></div>
-      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi level 0 sistem absensi QR.</p><pre><code>P1 Scan QR
-P2 Validasi ???
-P3 Simpan ke ???</code></pre></div>
-      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang DFD koperasi sekolah dari transaksi sampai laporan.</p></div>
-      <div data-wajib-s4="DFD">
-      <p><strong>Checklist latihan:</strong> buat context diagram level 0 lalu turunkan ke level 1 dan level 2 secara balancing.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>📚 Section 5: Referensi</h2>
-      <div class="refs">
-        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
-        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
-        <a class="ref-card" href="https://www.visual-paradigm.com/guide/data-flow-diagram/what-is-data-flow-diagram/" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
-        <a class="ref-card" href="https://dev.to/fmtweisszwerg/data-flow-diagram-dfd-4f8i" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
-      </div>
+      <h2>📚 Daftar Isi Materi</h2>
+      <p>Pilih urutan belajar dari atas ke bawah agar pemahaman lebih kuat. Jika masih awam, kerjakan latihan dari setiap halaman sebelum lanjut.</p>
+      <div class="table-cards"><a class="toc-card" href="pengenalan.html"><strong>1. Pengenalan DFD</strong><span>Komponen DFD dengan analogi jalur paket.</span></a><a class="toc-card" href="level.html"><strong>2. Level DFD</strong><span>Context diagram ke Level 1 dan Level 2.</span></a><a class="toc-card" href="aturan.html"><strong>3. Aturan DFD</strong><span>Aturan DFD dan kesalahan black hole/miracle/grey hole.</span></a><a class="toc-card" href="dfd-vs-erd.html"><strong>4. DFD vs ERD</strong><span>Perbedaan DFD dan ERD serta kapan memakai.</span></a><a class="toc-card" href="project-1.html"><strong>5. Mini Project 1</strong><span>DFD Sistem Perpustakaan.</span></a><a class="toc-card" href="project-2.html"><strong>6. Mini Project 2</strong><span>DFD Sistem Pemesanan Makanan.</span></a><a class="toc-card" href="project-utama.html"><strong>7. Project Utama</strong><span>DFD Sistem Akademik lengkap.</span></a></div>
     </section>
   </main>
+  <footer><div class="container">SMK Informatika Al-Irsyad Al-Islamiyyah Cirebon</div></footer>
 
-  <footer>
-    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
-  </footer>
 </body>
 </html>

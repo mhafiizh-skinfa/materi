@@ -3,135 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data | Materi Pembelajaran Pemrograman</title>
+  <title>Data Analyst Fundamental | Materi Pemrograman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary: #667eea; --secondary: #764ba2; --bg: #f5f7ff; --surface: #ffffff; --text: #1f2937; --muted: #6b7280; --border: #e5e7eb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    .container { width: min(980px, 92%); margin: 0 auto; }
-    nav { border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 10; }
-    .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 10px; }
-    .back { text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; padding: 8px 12px; font-weight: 600; white-space: nowrap; }
-    .title-nav { font-weight: 700; }
-    .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; padding: 52px 0; }
-    .hero h1 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
-    .hero p { margin-top: 10px; max-width: 760px; }
-    .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 700; }
-    main { padding: 28px 0 40px; }
-    section.content { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
-    section.content h2 { margin: 0 0 8px; font-size: 1.14rem; }
-    h3 { margin: 14px 0 8px; }
-    ul, ol { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    pre { margin: 8px 0 14px; background: #0f172a; color: #e2e8f0; border-radius: 10px; overflow-x: auto; padding: 14px; }
-    code { font-family: "Fira Code", "Courier New", monospace; font-size: .9rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    th, td { border: 1px solid var(--border); padding: 10px; }
-    th { background: var(--primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg); }
-    .soal { background: var(--bg); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
-    .soal h3 { margin: 0 0 8px; font-size: 1rem; }
-    .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-    .ref-card { text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; transition: transform .22s ease; }
-    .ref-card:hover { transform: translateY(-3px); }
-    .ref-card strong { display: block; margin-bottom: 4px; }
-    .ref-card span { color: var(--muted); font-size: .92rem; }
-    footer { border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--muted); font-size: .95rem; }
-</style>
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
 </head>
 <body>
+
   <nav>
     <div class="container nav-wrap">
       <a class="back" href="../index.html">← Kembali</a>
-      <div class="title-nav">Data</div>
+      <strong>Data Analyst Fundamental</strong>
     </div>
   </nav>
-
   <header class="hero">
     <div class="container">
-      <h1>🧮 Data</h1>
-      <p>Memahami siklus data dari pengumpulan hingga pengambilan keputusan.</p>
-      <span class="badge">Kelas XI</span>
+      <h1>📚 Data Analyst Fundamental</h1>
+      <p>Daftar isi sub-halaman materi Data Analyst Fundamental yang disusun bertahap dari konsep dasar sampai project nyata.</p>
+      <span class="badge">Kelas XI (Data Analyst)</span>
     </div>
   </header>
-
   <main class="container">
     <section class="content">
-      <h2>📖 Section 1: Penjelasan mendalam</h2>
-      <h3>Konsep Inti</h3>
-      <ul><li>Jenis data: terstruktur, semi-terstruktur, tidak terstruktur.</li><li>Kualitas data: akurat, lengkap, konsisten, tepat waktu.</li><li>Data lifecycle: collect, clean, analyze, communicate.</li><li>Etika data: privasi, persetujuan, dan keamanan.</li></ul>
-      <h3>Ringkasan Komponen</h3>
-      <table>
-        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Tips Pemula</th></tr></thead>
-        <tbody><tr><td>Data Mentah</td><td>Data asli dari sumber.</td><td>Jangan langsung dipakai analisis.</td></tr><tr><td>Data Bersih</td><td>Data setelah cleaning/validasi.</td><td>Dokumentasikan langkah cleaning.</td></tr><tr><td>Insight</td><td>Kesimpulan untuk aksi bisnis.</td><td>Hubungkan dengan keputusan nyata.</td></tr></tbody>
-      </table>
-      <div data-wajib-s1="data">
-      <h3>Konsep data wajib</h3><p><strong>Data</strong> adalah fakta mentah untuk diolah menjadi informasi; inilah jawaban sederhana untuk pertanyaan <em>what is data</em>.</p><p>Jenis data: <strong>kualitatif vs kuantitatif</strong>, serta <strong>structured vs unstructured</strong>.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🌍 Section 2: Analogi & Kasus Dunia Kerja</h2>
-      <h3>Analogi Sehari-hari</h3>
-      <ul><li>Data seperti bahan baku makanan: kualitas menentukan hasil.</li><li>Data lifecycle seperti proses produksi dari gudang ke konsumen.</li></ul>
-      <h3>Kasus Dunia Kerja</h3>
-      <p>Tim marketing mengevaluasi efektivitas kampanye iklan berdasarkan data konversi.</p>
-      <div data-wajib-s2="data">
-      <h3>Lifecycle data</h3><p>Alur: <strong>collect → clean → analyze → visualize → act</strong>. Tahap cleaning meliputi penanganan missing value, duplicate, dan outlier.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>🛠️ Section 3: Contoh step-by-step</h2>
-      <h3>Langkah 1: Klasifikasi data</h3><p>Identifikasi tipe data tiap kolom.</p><pre><code>Kolom umur: numerik
-Kolom kota: kategorikal
-Kolom tanggal: datetime</code></pre><h3>Langkah 2: Cleaning</h3><p>Tetapkan aturan pembersihan data.</p><pre><code>1. Hapus duplikat id_transaksi
-2. Isi null kategori dengan "Tidak diketahui"
-3. Samakan format tanggal</code></pre><h3>Langkah 3: Insight</h3><p>Tarik kesimpulan dari pola data.</p><pre><code>Jika 60% omzet dari 2 produk utama,
-prioritaskan stok dan promosi kedua produk tersebut.</code></pre>
-      <div data-wajib-s3="data">
-      <h3>Analisis dasar</h3><p>Statistik deskriptif (mean, median, modus, sebaran), tools (Spreadsheet, SQL, Python, BI), serta etika data (privasi, bias, keamanan) harus selalu dibahas.</p>
-      </div>
-    </section>
-
-    
-
-    <section class="content">
-      <h2>🧠 Section 4: Latihan Soal</h2>
-      <div class="soal"><h3>Soal 1 (Konsep)</h3><p>Apa dampak bisnis dari data banyak nilai kosong?</p></div>
-      <div class="soal"><h3>Soal 2 (Konsep)</h3><p>Bagaimana menyeimbangkan analitik dan privasi pengguna?</p></div>
-      <div class="soal"><h3>Soal 3 (Praktik)</h3><p>Lengkapi checklist validasi data harian.</p><pre><code>Checklist:
-- Cek jumlah baris ???
-- Cek null kolom ???
-- Cek duplikasi id ???</code></pre></div>
-      <div class="soal"><h3>Soal 4 (Praktik)</h3><p>Lengkapi pseudocode pembersihan duplikasi data.</p><pre><code>Mulai
- baca data
- hapus duplikat berdasarkan ???
- simpan hasil ke ???
-Selesai</code></pre></div>
-      <div class="soal"><h3>Soal 5 (Mini Project / Studi Kasus)</h3><p>Rancang alur data sistem peminjaman buku digital.</p></div>
-      <div data-wajib-s4="data">
-      <p><strong>Checklist latihan:</strong> jawaban harus menunjukkan klasifikasi data, lifecycle lengkap, cleaning, statistik deskriptif, tools, dan etika.</p>
-      </div>
-    </section>
-
-    <section class="content">
-      <h2>📚 Section 5: Referensi</h2>
-      <div class="refs">
-        <a class="ref-card" href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Programmer Zaman Now</span></a>
-        <a class="ref-card" href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer"><strong>YouTube</strong><span>Web Programming UNPAS</span></a>
-        <a class="ref-card" href="https://cloud.google.com/learn/what-is-data" target="_blank" rel="noopener noreferrer"><strong>Dokumentasi Resmi</strong><span>Sumber resmi</span></a>
-        <a class="ref-card" href="https://dev.to/sammybarasa/data-cleaning-for-beginners-2m10" target="_blank" rel="noopener noreferrer"><strong>Artikel</strong><span>Bacaan tambahan</span></a>
-      </div>
+      <h2>📚 Daftar Isi Materi</h2>
+      <p>Pilih urutan belajar dari atas ke bawah agar pemahaman lebih kuat. Jika masih awam, kerjakan latihan dari setiap halaman sebelum lanjut.</p>
+      <div class="table-cards"><a class="toc-card" href="pengenalan.html"><strong>1. Pengenalan Data</strong><span>Apa itu data, peran Data Analyst, roadmap karir.</span></a><a class="toc-card" href="jenis-data.html"><strong>2. Jenis Data</strong><span>Kualitatif/kuantitatif, structured/unstructured, skala pengukuran.</span></a><a class="toc-card" href="data-lifecycle.html"><strong>3. Data Lifecycle</strong><span>Collect-Store-Clean-Analyze-Visualize-Act.</span></a><a class="toc-card" href="data-cleaning.html"><strong>4. Data Cleaning</strong><span>Missing values, duplikat, outlier, inkonsistensi format.</span></a><a class="toc-card" href="statistik-deskriptif.html"><strong>5. Statistik Deskriptif</strong><span>Mean/median/mode/variance/std/percentile/quartile.</span></a><a class="toc-card" href="visualisasi-data.html"><strong>6. Visualisasi Data</strong><span>Prinsip visualisasi dan storytelling data.</span></a><a class="toc-card" href="tools-data.html"><strong>7. Tools Data Analyst</strong><span>Perbandingan Excel, SQL, Python, Power BI, Looker.</span></a><a class="toc-card" href="etika-data.html"><strong>8. Etika Data</strong><span>Privasi, UU PDP Indonesia, bias data, anonimisasi.</span></a><a class="toc-card" href="project-1.html"><strong>9. Mini Project 1</strong><span>Analisis Data Nilai Siswa.</span></a><a class="toc-card" href="project-utama.html"><strong>10. Project Utama</strong><span>Laporan EDA Lengkap Data Penjualan Toko.</span></a></div>
     </section>
   </main>
+  <footer><div class="container">SMK Informatika Al-Irsyad Al-Islamiyyah Cirebon</div></footer>
 
-  <footer>
-    <div class="container"><a href="../index.html">Kembali ke daftar materi</a></div>
-  </footer>
 </body>
 </html>

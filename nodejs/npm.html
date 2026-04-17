@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPM Dasar - Node.js | Materi Pemrograman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>:root{--primary:#667eea;--secondary:#764ba2;--bg:#f5f7ff;--surface:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box}body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1000px,92%);margin:0 auto}
+nav{border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:10}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
+.back{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:8px 12px;font-weight:600}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:52px 0}
+.badge{display:inline-block;margin-top:10px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
+main{padding:24px 0 34px}
+section.content{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:18px}
+h2{margin:0 0 8px}h3{margin:14px 0 8px}
+ul,ol{padding-left:20px;margin:0}
+.table-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
+.toc-card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;transition:transform .2s ease}
+.toc-card:hover{transform:translateY(-3px)}
+.toc-card strong{display:block;margin-bottom:6px}
+.toc-card span{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:20px 0;text-align:center;color:var(--muted)}
+
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--primary);color:#fff}
+tr:nth-child(even){background:var(--bg)}
+.soal{background:var(--bg);border-left:4px solid var(--primary);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.nav-subpage{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px;flex-wrap:wrap}
+.btn-nav{text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:10px;padding:10px 18px;font-weight:600;font-size:.9rem}
+.btn-nav.disabled{background:var(--border);color:var(--muted);pointer-events:none}
+.tip-box{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0}
+.warning-box{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 16px;margin:12px 0}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;overflow-x:auto;padding:16px}
+code{font-family:"Fira Code","Courier New",monospace;font-size:.9rem}</style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-wrap">
+      <a class="back" href="index.html">← Kembali ke Node.js</a>
+      <strong>Node.js</strong>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="container">
+      <h1>NPM Dasar</h1>
+      <p>NPM, package.json, semver, scripts.</p>
+      <span class="badge">Kelas XI</span>
+    </div>
+  </header>
+  <main class="container">
+    <div class="nav-subpage">
+  <a class="btn-nav" href="pengenalan.html">← Sebelumnya</a>
+  <a class="btn-nav" href="../index.html">📋 Daftar Isi</a>
+  <a class="btn-nav" href="module.html">Berikutnya →</a>
+</div>
+    <section class="content">
+      <h2>1) Penjelasan Mendalam</h2>
+      <p>Topik <strong>NPM Dasar</strong> membahas konsep inti Node.js dari dasar sampai implementasi. Fokuskan belajar pada alur: pahami istilah, lihat contoh, lalu latihan ulang dengan kata-kata sendiri.</p>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th><th>Contoh di Sekolah</th></tr></thead>
+        <tbody>
+          <tr><td>Konsep Utama</td><td>Bagian teori yang harus dipahami dulu.</td><td>Guru menjelaskan langkah sebelum praktik di lab.</td></tr>
+          <tr><td>Aturan Penting</td><td>Hal wajib agar hasil benar dan aman.</td><td>Selalu cek input sebelum diproses.</td></tr>
+          <tr><td>Hasil Akhir</td><td>Output yang harus bisa diuji.</td><td>Laporan/fitur berhasil berjalan.</td></tr>
+        </tbody>
+      </table>
+      <p>Supaya mendalam, pecah masalah menjadi unit kecil: <em>input → proses → output → evaluasi</em>. Metode ini membantu siswa yang mudah bingung saat debug karena setiap langkah bisa dicek satu per satu.</p>
+    </section>
+
+    <section class="content">
+      <h2>2) Analogi &amp; Contoh Nyata</h2>
+      <div class="tip-box"><strong>Analogi Warung:</strong> NPM Dasar seperti alur pesanan di warung. Pelanggan memberi pesanan (input), penjual memasak (proses), lalu makanan disajikan (output).</div>
+      <div class="tip-box"><strong>Analogi HP:</strong> Saat membuka aplikasi di HP, kita menekan tombol (input), sistem menghitung (proses), lalu layar menampilkan hasil (output). Konsep yang sama dipakai di Node.js.</div>
+      <div class="warning-box"><strong>Kesalahan umum:</strong> Langsung menulis kode tanpa rancangan. Akibatnya siswa bingung saat error muncul karena tidak tahu bagian mana yang salah. Selalu buat langkah kecil dulu.</div>
+      <p><strong>Contoh nyata Indonesia:</strong> sistem absensi sekolah, antrian kantin, dan pendaftaran ekstrakurikuler semuanya butuh alur yang jelas agar data tidak tertukar.</p>
+    </section>
+
+    <section class="content">
+      <h2>3) Contoh Praktik (Mudah → Sulit)</h2>
+      <h3>Contoh 1 (Mudah)</h3>
+      <pre><code>// Contoh 1: Dasar Node.js
+// Komentar: mulai dari langkah paling sederhana agar tidak bingung
+const topik = &quot;Node.js&quot;;
+console.log(`Saya sedang belajar ${topik}`);</code></pre>
+      <h3>Contoh 2 (Menengah)</h3>
+      <pre><code>// Contoh 2: Menengah Node.js
+// Komentar: gunakan struktur data agar kode lebih rapi
+const dataSiswa = [
+  { nama: &quot;Alya&quot;, nilai: 88 },
+  { nama: &quot;Bima&quot;, nilai: 76 },
+  { nama: &quot;Citra&quot;, nilai: 92 }
+];
+
+const lulus = dataSiswa.filter((item) =&gt; item.nilai &gt;= 75);
+console.log(&quot;Siswa lulus:&quot;, lulus);</code></pre>
+      <h3>Contoh 3 (Sulit)</h3>
+      <pre><code>// Contoh 3: Lanjutan Node.js
+// Komentar: pecah masalah besar jadi fungsi kecil agar mudah debug
+function evaluasiBelajar(input) {
+  if (!input || input.length === 0) {
+    return &quot;Data belum diisi&quot;;
+  }
+
+  const rataRata = input.reduce((total, item) =&gt; total + item.nilai, 0) / input.length;
+  return `Rata-rata kelas: ${rataRata.toFixed(2)}`;
+}
+
+console.log(evaluasiBelajar(dataSiswa));</code></pre>
+    </section>
+
+    <section class="content">
+      <h2>4) Latihan Soal</h2>
+      <div class="soal">
+        <h3>Soal Critical Thinking</h3>
+        <p>Jika sistem sekolah tiba-tiba lambat saat jam istirahat, bagian mana dari alur Node.js yang harus dicek dulu? Jelaskan alasanmu.</p>
+      </div>
+      <div class="soal">
+        <h3>Soal Problem Solving</h3>
+        <p>Buat strategi agar data ganda tidak masuk ke sistem. Jelaskan validasi yang diperlukan sebelum penyimpanan data.</p>
+      </div>
+      <div class="soal">
+        <h3>Starter Code Belum Lengkap</h3>
+        <pre><code>// Lengkapi kode berikut
+const data = [{ nama: "Dini", nilai: 90 }, { nama: "Eka", nilai: 68 }];
+
+function hitungStatus(item) {
+  // TODO: isi logika lulus/tidak lulus
+  return item.nilai >= ??? ? "Lulus" : "Tidak Lulus";
+}
+
+const hasil = data.map((item) => ({
+  nama: item.nama,
+  status: hitungStatus(item)
+}));
+
+console.log(hasil);</code></pre>
+      </div>
+      <div class="soal">
+        <h3>Mini Project Studi Kasus</h3>
+        <p>Bangun modul <strong>NPM Dasar</strong> untuk skenario sekolah: input data, validasi, proses utama, dan laporan sederhana. Tulis juga daftar bug yang mungkin muncul beserta cara mengatasinya.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <h2>5) Referensi Belajar</h2>
+      <h3>YouTube Indonesia</h3>
+      <ul><li><a href="https://www.youtube.com/@ProgrammerZamanNow" target="_blank" rel="noopener noreferrer">Programmer Zaman Now</a></li><li><a href="https://www.youtube.com/@sandhikagalihWPU" target="_blank" rel="noopener noreferrer">Web Programming UNPAS</a></li><li><a href="https://www.youtube.com/@kawankoding" target="_blank" rel="noopener noreferrer">Kawan Koding</a></li><li><a href="https://www.youtube.com/@buildwithangga" target="_blank" rel="noopener noreferrer">Build With Angga</a></li><li><a href="https://www.youtube.com/@sekolahkoding" target="_blank" rel="noopener noreferrer">Sekolah Koding</a></li></ul>
+      <h3>Dokumentasi Resmi</h3>
+      <ul>
+        <li><a href="https://nodejs.org/en/docs" target="_blank" rel="noopener noreferrer">Dokumentasi Node.js</a></li>
+      </ul>
+    </section>
+    <div class="nav-subpage">
+  <a class="btn-nav" href="pengenalan.html">← Sebelumnya</a>
+  <a class="btn-nav" href="../index.html">📋 Daftar Isi</a>
+  <a class="btn-nav" href="module.html">Berikutnya →</a>
+</div>
+  </main>
+  <footer><div class="container"><a href="../index.html">Kembali ke daftar materi utama</a></div></footer>
+
+</body>
+</html>
